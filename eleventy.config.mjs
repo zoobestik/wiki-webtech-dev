@@ -1,14 +1,15 @@
-import {IdAttributePlugin} from "@11ty/eleventy";
+import {IdAttributePlugin, } from "@11ty/eleventy";
 import {eleventyImageTransformPlugin} from "@11ty/eleventy-img";
 import eleventyNavigationPlugin from "@11ty/eleventy-navigation";
 
-import esbuild from "esbuild";
+// import esbuild from "esbuild";
+import {createHighlighter} from 'shiki';
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 export default async function (eleventyConfig) {
     eleventyConfig.setInputDirectory("research");
     eleventyConfig.setLayoutsDirectory("../.eleventy/_layouts");
-    eleventyConfig.setTemplateFormats(["md", "html", "njk"]);
+    eleventyConfig.setTemplateFormats(["md", "njk"]);
     eleventyConfig.setDataFileBaseName("config");
 
     eleventyConfig.addGlobalData("layout", "base");
@@ -21,34 +22,63 @@ export default async function (eleventyConfig) {
 
     eleventyConfig.addPlugin(eleventyNavigationPlugin);
     eleventyConfig.addPlugin(IdAttributePlugin);
+    eleventyConfig.addPlugin(shikiPlugin);
 
-    addEsbuildBundler(eleventyConfig);
     addReadmeAsIndex(eleventyConfig);
     addImagePlugin(eleventyConfig);
-    addJsBundlePlugin(eleventyConfig);
 
+    // addEsbuildBundler(eleventyConfig);
+    // addJsBundlePlugin(eleventyConfig);
 };
+//
+// /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
+// function addEsbuildBundler(eleventyConfig) {
+//     const assetsPath = '.eleventy/_assets';
+//     const outputPath = '_site';
+//
+//     eleventyConfig.addNunjucksAsyncShortcode("prismjs", async function () {
+//         await esbuild.build({
+//             entryPoints: [`${assetsPath}/prismjs/index.mjs`],
+//             bundle: true,
+//             minify: true,
+//             sourcemap: false,
+//             outfile: `${outputPath}/prism.js`,
+//             external: [],
+//             treeShaking: true,
+//             target: ["es2020"]
+//         });
+//         return '/prism.js';
+//     });
+//     eleventyConfig.addWatchTarget("../.eleventy/_assets/");
+// }
+//
+// /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
+// function addJsBundlePlugin(eleventyConfig) {
+//     eleventyConfig.addBundle("js");
+//     eleventyConfig.addWatchTarget("../.eleventy/_js/**/*.js");
+// }
 
+const SHIKI_OPTIONS = Object.freeze({
+    themes: ["min-light", "min-dark"],
+    langs: ["html", "js", "css", "mermaid", "http"],
+});
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-function addEsbuildBundler(eleventyConfig) {
-    const assetsPath = '.eleventy/_assets';
-    const outputPath = '_site';
+async function shikiPlugin(eleventyConfig) {
+    const highlighter = await createHighlighter(SHIKI_OPTIONS);
 
-    eleventyConfig.addNunjucksAsyncShortcode("prismjs", async function () {
-        await esbuild.build({
-            entryPoints: [`${assetsPath}/prismjs/index.mjs`],
-            bundle: true,
-            minify: true,
-            sourcemap: false,
-            outfile: `${outputPath}/prism.js`,
-            external: [],
-            treeShaking: true,
-            target: ["es2020"]
+    eleventyConfig.amendLibrary("md", (library) => {
+        library.set({
+            highlight: (code, language) => highlighter.codeToHtml(code, {
+                lang: language,
+                themes: {
+                    light: SHIKI_OPTIONS.themes[0],
+                    dark: SHIKI_OPTIONS.themes[1],
+                },
+                defaultColor: 'light-dark()',
+            }),
         });
-        return '/prism.js';
     });
-    eleventyConfig.addWatchTarget("../.eleventy/_assets/");
 }
 
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
@@ -75,18 +105,12 @@ function addReadmeAsIndex(eleventyConfig) {
 /** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
 function addImagePlugin(eleventyConfig) {
     eleventyConfig.addPlugin(eleventyImageTransformPlugin, {
-        formats: ["png", "webp", "jpeg", "svg"], widths: ["auto"], htmlOptions: {
-            imgAttributes: {
-                loading: "lazy", decoding: "async",
-            }, pictureAttributes: {}
-        }, sharpOptions: {
-            animated: true,
+        formats: ["png", "webp", "jpeg", "svg"],
+        sharpOptions: {animated: true},
+        htmlOptions: {
+            pictureAttributes: {},
+            imgAttributes: {loading: "lazy", decoding: "async"},
         },
+        widths: ["auto"],
     });
-}
-
-/** @param {import("@11ty/eleventy").UserConfig} eleventyConfig */
-function addJsBundlePlugin(eleventyConfig) {
-    eleventyConfig.addWatchTarget("../.eleventy/_js/**/*.js");
-    eleventyConfig.addBundle("js");
 }
