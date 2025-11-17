@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>{{ title or "Frontend baseline 2018–2022" }}</title>
+    <link href="/prism.css" rel="stylesheet">
+</head>
+<body>
+<nav>
+    <h2 class="visually-hidden">Top level navigation menu</h2>
+    <ul class="nav">
+        {%- for entry in collections.all | eleventyNavigation %}
+        <li class="nav-item"><a href="{{ entry.url }}" {% if entry.url== page.url %} aria-current="page" {% endif %}>{{
+            entry.title }}</a></li>
+        {%- endfor %}
+    </ul>
+</nav>
+<main>
+    {{ content | safe }}
+</main>
+<script type="module" defer src="{%- prismjs %}"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+/.idea/
+/*.iml
+
+tmp/
+_site/
+node_modules/
+.DS_Store
+.obsidian
