@@ -5,6 +5,7 @@ export default withMermaid(
     defineConfig({
         srcDir: 'research/',
         outDir: './dist',
+        base: '/wiki-webtech-dev/',
 
         title: 'Research Hub',
         description: 'Коллекция глубоких исследований по frontend-разработке и веб-технологиям',
