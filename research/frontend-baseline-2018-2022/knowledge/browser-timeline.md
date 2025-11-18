@@ -403,5 +403,3 @@ gantt
 - Safari Release Notes: https://developer.apple.com/documentation/safari-release-notes
 - Wikipedia: Google Chrome version history, Firefox version history, Safari version history, Microsoft Edge
 - Chromium Blog: Speeding up Chrome's release cycle (March 2021)
-
-**Дата создания:** 17.11.2025
