@@ -12,8 +12,6 @@ lastUpdated: true
 **Research ID**: `frontend-baseline-2023-2025`  
 **Дата создания**: 18 ноября 2025
 
----
-
 ## Обзор года
 
 2023 год стал **революционным** для frontend-разработки, особенно для CSS. Ключевые достижения:
@@ -28,8 +26,6 @@ lastUpdated: true
 6. **Immutability** — ES2023 Change Array by Copy методы
 7. **Network Protocols** — HTTP/3 достиг 40% трафика, WebTransport в Firefox
 8. **Authentication** — WebAuthn Level 3, Passkeys в production
-
----
 
 ## Технологические отчёты
 
@@ -54,8 +50,6 @@ lastUpdated: true
 - Мобильная оптимизация (`enterkeyhint`, `inputmode`)
 - Web Application Manifest
 - Accessibility improvements
-
----
 
 ### 🎨 [CSS — изменения 2023 года](./css.md)
 
@@ -97,8 +91,6 @@ lastUpdated: true
 - Subgrid завершает CSS Grid
 - CSS Nesting нативно в браузерах
 
----
-
 ### 💻 [JavaScript — изменения 2023 года](./javascript.md)
 
 **Объём**: 2,163 строки  
@@ -137,8 +129,6 @@ lastUpdated: true
 - Медиа и графика
 - Устройства и периферия
 - Безопасность и приватность
-
----
 
 ### 🔒 [HTTP, Protocols & Security — изменения 2023 года](./http-security.md)
 
@@ -184,8 +174,6 @@ lastUpdated: true
 - WebAuthn и authentication
 - Deprecations
 
----
-
 ## Статистика Baseline 2023
 
 ### Достигли Baseline Newly Available в 2023
@@ -211,8 +199,6 @@ lastUpdated: true
 - **Declarative Shadow DOM** → ожидание Firefox
 - **View Transitions API** → ожидание Safari/Firefox
 - **WebAuthn Conditional UI** → приближается
-
----
 
 ## Ключевые метрики года
 
@@ -240,8 +226,6 @@ Security:   10+ major initiatives
 - **1300+ новых accessibility тестов**
 - **Достижения**: Container Queries, Subgrid, `:has()`, CSS Color, Nesting
 
----
-
 ## Рекомендации по изучению
 
 ### 🚀 Начать немедленно (Production-ready)
@@ -265,8 +249,6 @@ Security:   10+ major initiatives
 3. **WebAuthn Level 3** — приближается к Baseline
 4. **Private Network Access** — готовиться к enforcement
 
----
-
 ## Навигация по исследованию
 
 ### Технические отчёты 2023
@@ -287,8 +269,6 @@ Security:   10+ major initiatives
 - **Предыдущий период**:
   [Frontend Baseline 2018-2022](../../../frontend-baseline-2018-2022/knowledge/final-report.md)
 - **Следующий период**: Frontend Baseline 2024 _(в разработке)_
-
----
 
 ## Ключевые выводы 2023 года
 
@@ -333,8 +313,6 @@ Security:   10+ major initiatives
 - HTTP/3 → 40% трафика
 - Import Maps, Modulepreload → Baseline
 - Priority Hints → управление приоритетами
-
----
 
 ## Метаданные исследования
 

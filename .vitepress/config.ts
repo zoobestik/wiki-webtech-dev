@@ -1,5 +1,151 @@
-import { defineConfig } from 'vitepress';
+import { DefaultTheme, defineConfig } from 'vitepress';
 import { withMermaid } from 'vitepress-plugin-mermaid';
+
+const nav: DefaultTheme.NavItem[] = [
+    { text: 'Research Hub', link: '/' },
+    {
+        text: 'Результаты',
+        items: [
+            {
+                text: 'Frontend Baseline 2018-2022',
+                link: '/frontend-baseline-2018-2022/',
+            },
+            {
+                text: 'Frontend Baseline 2023-2025',
+                link: '/frontend-baseline-2023-2025/knowledge/2023/',
+            },
+        ],
+    },
+];
+
+const MAIN_SIDEBAR: DefaultTheme.SidebarItem[] = [
+    {
+        text: 'Фундаментальный Web',
+        items: [
+            {
+                text: 'Frontend Baseline 2018-2022',
+                link: '/frontend-baseline-2018-2022/',
+            },
+            {
+                text: 'Frontend Baseline 2023-2025',
+                link: '/frontend-baseline-2023-2025/knowledge/2023/',
+            },
+        ],
+    },
+] as const;
+
+const FRONTEND_BASELINE_2018_2022_SIDEBAR: DefaultTheme.SidebarItem[] = [
+    {
+        text: 'Frontend Baseline 2018-2022',
+        link: '/frontend-baseline-2018-2022/',
+        items: [
+            {
+                text: 'Final Report',
+                link: '/frontend-baseline-2018-2022/knowledge/final-report.html',
+            },
+        ],
+    },
+    {
+        text: 'Технологии',
+        items: [
+            {
+                text: 'HTML изменения',
+                link: '/frontend-baseline-2018-2022/knowledge/html-changes.html',
+            },
+            {
+                text: 'CSS изменения',
+                link: '/frontend-baseline-2018-2022/knowledge/css-changes.html',
+            },
+            {
+                text: 'JavaScript & Web APIs',
+                link: '/frontend-baseline-2018-2022/knowledge/javascript-webapis-summary.html',
+            },
+        ],
+    },
+    {
+        text: 'Методология',
+        items: [
+            {
+                text: 'Scope исследования',
+                link: '/frontend-baseline-2018-2022/knowledge/scope.html',
+            },
+            {
+                text: 'Timeline браузеров',
+                link: '/frontend-baseline-2018-2022/knowledge/browser-timeline.html',
+            },
+            {
+                text: 'План исследования',
+                link: '/frontend-baseline-2018-2022/plan.html',
+            },
+        ],
+    },
+] as const;
+
+const FRONTEND_BASELINE_2023_2025_SIDEBAR: DefaultTheme.SidebarItem[] = [
+    {
+        text: '2023',
+        link: '/frontend-baseline-2023-2025/knowledge/2023/',
+        items: [
+            { text: 'HTML', link: '/frontend-baseline-2023-2025/knowledge/2023/html.html' },
+            { text: 'CSS', link: '/frontend-baseline-2023-2025/knowledge/2023/css.html' },
+            {
+                text: 'JavaScript & Web APIs',
+                link: '/frontend-baseline-2023-2025/knowledge/2023/javascript.html',
+            },
+            {
+                text: 'HTTP и Безопасность',
+                link: '/frontend-baseline-2023-2025/knowledge/2023/http-security.html',
+            },
+        ],
+    },
+    {
+        text: '2024',
+        link: '/frontend-baseline-2023-2025/knowledge/2024/',
+        items: [
+            { text: 'HTML', link: '/frontend-baseline-2023-2025/knowledge/2024/html.html' },
+            { text: 'CSS', link: '/frontend-baseline-2023-2025/knowledge/2024/css.html' },
+            {
+                text: 'JavaScript & Web APIs',
+                link: '/frontend-baseline-2023-2025/knowledge/2024/javascript.html',
+            },
+            {
+                text: 'HTTP и Безопасность',
+                link: '/frontend-baseline-2023-2025/knowledge/2024/http-security.html',
+            },
+        ],
+    },
+    // {
+    //     text: '2025',
+    //     link: '/frontend-baseline-2023-2025/knowledge/2025/',
+    //     items: [
+    //         { text: 'HTML', link: '/frontend-baseline-2023-2025/knowledge/2025/html' },
+    //         { text: 'CSS', link: '/frontend-baseline-2023-2025/knowledge/2025/css' },
+    //         {
+    //             text: 'JavaScript & Web APIs',
+    //             link: '/frontend-baseline-2023-2025/knowledge/2025/javascript',
+    //         },
+    //         {
+    //             text: 'HTTP и Протоколы',
+    //             link: '/frontend-baseline-2023-2025/knowledge/2025/http-protocols',
+    //         },
+    //         { text: 'Безопасность', link: '/frontend-baseline-2023-2025/knowledge/2025/security' },
+    //     ],
+    // },
+    {
+        text: 'Методология',
+        items: [
+            {
+                text: 'Scope исследования',
+                link: '/frontend-baseline-2023-2025/knowledge/scope.html',
+            },
+            {
+                text: 'Источники данных',
+                link: '/frontend-baseline-2023-2025/knowledge/data-sources.html',
+            },
+            { text: 'План исследования', link: '/frontend-baseline-2023-2025/plan.html' },
+        ],
+    },
+] as const;
 
 export default withMermaid(
     defineConfig({
@@ -13,87 +159,18 @@ export default withMermaid(
         description: 'Коллекция глубоких исследований по frontend-разработке и веб-технологиям',
 
         themeConfig: {
-            nav: [
-                { text: 'Research Hub', link: '/' },
-                {
-                    text: 'Результаты',
-                    items: [
-                        {
-                            text: 'Frontend Baseline 2018-2022',
-                            link: '/frontend-baseline-2018-2022/',
-                        },
-                    ],
-                },
-            ],
-
+            nav,
             sidebar: {
-                '/': [
-                    {
-                        text: 'Фундаментальный Web',
-                        items: [
-                            {
-                                text: 'Frontend Baseline 2018-2022',
-                                link: '/frontend-baseline-2018-2022/',
-                            },
-                        ],
-                    },
-                ],
-                '/frontend-baseline-2018-2022/': [
-                    {
-                        text: 'Frontend Baseline 2018-2022',
-                        link: '/frontend-baseline-2018-2022/',
-                        items: [
-                            {
-                                text: 'Final Report',
-                                link: '/frontend-baseline-2018-2022/knowledge/final-report',
-                            },
-                        ],
-                    },
-                    {
-                        text: 'Технологии',
-                        items: [
-                            {
-                                text: 'HTML изменения',
-                                link: '/frontend-baseline-2018-2022/knowledge/html-changes',
-                            },
-                            {
-                                text: 'CSS изменения',
-                                link: '/frontend-baseline-2018-2022/knowledge/css-changes',
-                            },
-                            {
-                                text: 'JavaScript & Web APIs',
-                                link: '/frontend-baseline-2018-2022/knowledge/javascript-webapis-summary',
-                            },
-                        ],
-                    },
-                    {
-                        text: 'Методология',
-                        items: [
-                            {
-                                text: 'Scope исследования',
-                                link: '/frontend-baseline-2018-2022/knowledge/scope',
-                            },
-                            {
-                                text: 'Timeline браузеров',
-                                link: '/frontend-baseline-2018-2022/knowledge/browser-timeline',
-                            },
-                            {
-                                text: 'План исследования',
-                                link: '/frontend-baseline-2018-2022/plan',
-                            },
-                        ],
-                    },
-                ],
+                '/': MAIN_SIDEBAR,
+                '/frontend-baseline-2018-2022/': FRONTEND_BASELINE_2018_2022_SIDEBAR,
+                '/frontend-baseline-2023-2025/': FRONTEND_BASELINE_2023_2025_SIDEBAR,
             },
-
             socialLinks: [
-                { icon: 'github', link: 'https://github.com/zoobestik/wiki-webtech-dev' },
+                { icon: 'github', link: 'https://github.com/zoobestik/wiki-webtech-dev/' },
             ],
-
             search: {
                 provider: 'local',
             },
-
             outline: {
                 level: [2, 3],
                 label: 'На этой странице',
