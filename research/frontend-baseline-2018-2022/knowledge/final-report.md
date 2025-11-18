@@ -1,11 +1,16 @@
+---
+title: Final Report
+description: Comprehensive отчет об изменениях Frontend Development 2018-2022 с executive summary и roadmap
+outline: deep
+lastUpdated: true
+---
+
 # Frontend Development: Comprehensive изменения 2018–2022
 
 **Research ID:** `frontend-baseline-2018-2022`
 **Дата:** 17.11.2025
 **Целевая аудитория:** Опытный frontend-разработчик (15+ лет опыта)
 **Период исследования:** 1 января 2018 — 31 декабря 2022
-
----
 
 ## Executive Summary
 
@@ -20,17 +25,20 @@
 ### Технологические прорывы
 
 **HTML:**
+
 - `<dialog>` достиг baseline (март 2022) — нативные модальные окна
 - Native lazy loading через атрибут `loading` (baseline 2022)
 - Контроль виртуальной клавиатуры: `enterkeyhint`, `inputmode`
 
 **CSS:**
+
 - Layout революция: Flexbox `gap` (2021), `aspect-ratio` (2021)
 - Математика: `clamp()`, `min()`, `max()` (2020) — responsive без media queries
 - Селекторы: `:is()`, `:where()` (2021), `:has()` появился (2022, baseline 2023)
 - Accessibility: `prefers-color-scheme` (2020), `prefers-reduced-motion` (2020), `:focus-visible` (2022)
 
 **JavaScript:**
+
 - ES2020 — самый значимый релиз: optional chaining (`?.`), nullish coalescing (`??`), `Promise.allSettled()`, BigInt
 - ES2022: top-level await, private class fields, `Array.at()`
 - Web APIs: Observers расширение (Resize, Intersection v2), Performance APIs (Core Web Vitals)
@@ -50,8 +58,6 @@
 └── JS/API: ~30 значимых фич достигли baseline
 ```
 
----
-
 ## Структура исследования
 
 Детальные материалы организованы по модулям:
@@ -65,51 +71,53 @@
 5. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JavaScript и Web API изменения
 6. **[final-report.md](./final-report.md)** — этот документ (executive summary и roadmap)
 
----
-
 ## Timeline ключевых событий
 
 ### 2018
 
 **Q1:**
+
 - **Январь:** Chrome 64, AppCache депрекация в DevTools warnings
 - **Март:** Firefox 59 (overscroll-behavior), Safari 11.1 (Service Workers)
 
 **Q2-Q4:**
+
 - **Июль:** Chrome 68 (HTTPS-only warnings)
 - **Сентябрь:** Safari 12 (ITP 2.0, Automatic Strong Passwords)
 - **Октябрь:** Chrome 70 (AppCache удаление из insecure origins), Firefox 63 (Flexbox gap)
 
 **Язык:**
-- ES2018: async iteration, rest/spread для объектов, `Promise.finally()`
 
----
+- ES2018: async iteration, rest/spread для объектов, `Promise.finally()`
 
 ### 2019 — год консолидации
 
 **Q1-Q2:**
+
 - **Март:** Safari 12.1 (Dark Mode для веба, Intersection Observer)
 - **Апрель:** Chrome 74 (native lazy loading за флагом)
 - **Май:** W3C передаёт HTML/DOM управление WHATWG ⭐
 
 **Q3-Q4:**
+
 - **Июль:** Chrome 76 (`loading="lazy"` stable, `backdrop-filter`)
 - **Сентябрь:** Safari 13 (Sign in with Apple, FIDO2)
 - **Декабрь:** Firefox 71 (subgrid — первый браузер!)
 
 **Язык:**
-- ES2019: `Array.flat()`, `flatMap()`, `Object.fromEntries()`, `String.trim*()`
 
----
+- ES2019: `Array.flat()`, `flatMap()`, `Object.fromEntries()`, `String.trim*()`
 
 ### 2020 — COVID и прорывы
 
 **Q1:**
+
 - **Январь:** Edge Chromium релиз ⭐
 - **Март:** Safari 13.1 (Web Animations API, Async Clipboard, PiP)
 - **Апрель:** Firefox 75 (`loading="lazy"`), Chrome 81
 
 **Q2-Q4:**
+
 - **Июль:** Chrome 84 (Flexbox gap, AppCache disabled by default), `clamp()` baseline ⭐
 - **Август:** Chrome 85 (`@property` — Houdini)
 - **Сентябрь:** Safari 14 (`:is()`, `:where()`)
@@ -117,62 +125,65 @@
 - **Декабрь:** WHATWG удаляет AppCache из спецификации, Adobe Flash Player EOL
 
 **Язык:**
-- ES2020 — прорыв: optional chaining (`?.`), nullish coalescing (`??`), BigInt, `Promise.allSettled()`, dynamic `import()` ⭐
 
----
+- ES2020 — прорыв: optional chaining (`?.`), nullish coalescing (`??`), BigInt, `Promise.allSettled()`, dynamic `import()` ⭐
 
 ### 2021 — year of baseline
 
 **Q1-Q2:**
+
 - **Январь:** Chrome 88 (Flash полностью удалён)
 - **Апрель:** Safari 14.1 (Flexbox gap baseline ⭐, `aspect-ratio`)
 - **Май:** Chrome 90 (Declarative Shadow DOM)
 - **Июнь:** Firefox 89 (Proton UI redesign), HTML 5.x retired в пользу Living Standard
 
 **Q3-Q4:**
+
 - **Сентябрь:** Safari 15 (`aspect-ratio` baseline ⭐), Chrome 94 (4-week release cycle начало)
 - **Ноябрь:** Firefox 94 (`enterkeyhint` baseline)
 - **Декабрь:** Firefox 95 (`inputmode` baseline)
 
 **Язык:**
-- ES2021: logical assignment (`||=`, `&&=`, `??=`), numeric separators, `String.replaceAll()`, `Promise.any()`
 
----
+- ES2021: logical assignment (`||=`, `&&=`, `??=`), numeric separators, `String.replaceAll()`, `Promise.any()`
 
 ### 2022 — финальные штрихи периода
 
 **Q1-Q2:**
+
 - **Март:** Safari 15.4 — множественный baseline ⭐:
-  - `<dialog>` (наконец!)
-  - `:has()` (первый браузер)
-  - `:focus-visible`
-  - `loading="lazy"`
-  - Cascade Layers
-  - `accent-color`
+    - `<dialog>` (наконец!)
+    - `:has()` (первый браузер)
+    - `:focus-visible`
+    - `loading="lazy"`
+    - Cascade Layers
+    - `accent-color`
 
 - **Апрель:** Chrome 101 (`fetchpriority`)
 - **Май:** Chrome 102, Safari 15.5 (`inert`)
 
 **Q3-Q4:**
+
 - **Август:** Chrome 105 (`:has()`, Container Queries), Firefox 104
 - **Сентябрь:** Safari 16 (Container Queries, subgrid), `overscroll-behavior` baseline
 - **Ноябрь:** Chrome 108
 
 **Язык:**
-- ES2022: top-level await, `Array.at()`, `Object.hasOwn()`, private class fields, `Error.cause`
 
----
+- ES2022: top-level await, `Array.at()`, `Object.hasOwn()`, private class fields, `Error.cause`
 
 ## Ключевые тренды и insights
 
 ### 1. Консолидация экосистемы
 
 **Chromium доминирование:**
+
 - Edge миграция (январь 2020) → ~70% market share на Chromium
 - Opera, Brave, Vivaldi — все на Chromium
 - Только Firefox (Gecko) и Safari (WebKit) остаются независимыми
 
 **Последствия:**
+
 - ✅ Быстрее достигается baseline для фич, поддерживаемых Chromium
 - ✅ Меньше cross-browser багов
 - ⚠️ Риск монокультуры, меньше конкуренции идей
@@ -182,13 +193,13 @@
 
 Множество фич достигло baseline только после поддержки Safari:
 
-| Фича | Chrome | Firefox | Safari (последний) | Baseline |
-|------|--------|---------|-------------------|----------|
-| Flexbox gap | 2020 | 2018 | **2021** | 2021 |
-| `aspect-ratio` | 2021 | 2021 | **2021** | 2021 |
-| `<dialog>` | 2014 | 2022 | **2022** | 2022 |
-| `:focus-visible` | 2020 | 2021 | **2022** | 2022 |
-| `loading="lazy"` | 2019 | 2020 | **2022** | 2022 |
+| Фича             | Chrome | Firefox | Safari (последний) | Baseline |
+| ---------------- | ------ | ------- | ------------------ | -------- |
+| Flexbox gap      | 2020   | 2018    | **2021**           | 2021     |
+| `aspect-ratio`   | 2021   | 2021    | **2021**           | 2021     |
+| `<dialog>`       | 2014   | 2022    | **2022**           | 2022     |
+| `:focus-visible` | 2020   | 2021    | **2022**           | 2022     |
+| `loading="lazy"` | 2019   | 2020    | **2022**           | 2022     |
 
 **Причина:** Safari релизы привязаны к macOS/iOS релизам (2 раза в год vs. 8-12 раз для Chrome/Firefox).
 
@@ -213,6 +224,7 @@ gantt
 ```
 
 **Последствия:**
+
 - Более быстрое внедрение фич
 - Больше версий для тестирования
 - Сложнее поддержка старых версий
@@ -222,32 +234,34 @@ gantt
 **CSS Grid (baseline 2017)** + **Flexbox gap (2021)** + **aspect-ratio (2021)** = полный набор инструментов для современного layout без хаков.
 
 **До:**
+
 ```css
 /* Padding-bottom hack для aspect ratio */
 .video-wrapper {
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
 }
 
 /* Margin хаки для gap */
 .flex-item {
-  margin-right: 1rem;
+    margin-right: 1rem;
 }
 .flex-item:last-child {
-  margin-right: 0;
+    margin-right: 0;
 }
 ```
 
 **После:**
+
 ```css
 .video {
-  aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
 }
 
 .flex-container {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 ```
 
@@ -256,29 +270,31 @@ gantt
 `clamp()`, `min()`, `max()` (baseline 2020) изменили подход к responsive design:
 
 **Старый подход:**
+
 ```css
 .title {
-  font-size: 1.5rem;
+    font-size: 1.5rem;
 }
 
 @media (min-width: 768px) {
-  .title {
-    font-size: 2rem;
-  }
+    .title {
+        font-size: 2rem;
+    }
 }
 
 @media (min-width: 1200px) {
-  .title {
-    font-size: 3rem;
-  }
+    .title {
+        font-size: 3rem;
+    }
 }
 ```
 
 **Новый подход:**
+
 ```css
 .title {
-  font-size: clamp(1.5rem, 5vw, 3rem);
-  /* Responsive без media queries! */
+    font-size: clamp(1.5rem, 5vw, 3rem);
+    /* Responsive без media queries! */
 }
 ```
 
@@ -289,19 +305,21 @@ gantt
 До ES2020 многие фичи были syntax sugar (arrow functions, destructuring и т.д.).
 
 ES2020 принёс реальные новые возможности:
+
 - Optional chaining — решает null/undefined traversal
 - Nullish coalescing — решает falsy values проблему
 - BigInt — arbitrary precision numbers
 - `Promise.allSettled()` — новые async паттерны
 
 **Практическое влияние:**
+
 ```javascript
 // До ES2020 — verbose и error-prone
 let street;
 if (user && user.address && user.address.street) {
-  street = user.address.street;
+    street = user.address.street;
 } else {
-  street = 'Unknown';
+    street = 'Unknown';
 }
 
 // ES2020 — concise и безопасно
@@ -316,18 +334,18 @@ const street = user?.address?.street ?? 'Unknown';
 // Layout Shift tracking
 let cls = 0;
 new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    if (!entry.hadRecentInput) {
-      cls += entry.value;
+    for (const entry of list.getEntries()) {
+        if (!entry.hadRecentInput) {
+            cls += entry.value;
+        }
     }
-  }
 }).observe({ type: 'layout-shift', buffered: true });
 
 // LCP tracking
 new PerformanceObserver((list) => {
-  const entries = list.getEntries();
-  const lastEntry = entries[entries.length - 1];
-  console.log('LCP:', lastEntry.renderTime);
+    const entries = list.getEntries();
+    const lastEntry = entries[entries.length - 1];
+    console.log('LCP:', lastEntry.renderTime);
 }).observe({ type: 'largest-contentful-paint', buffered: true });
 ```
 
@@ -355,71 +373,74 @@ new PerformanceObserver((list) => {
 ### Что использовать сегодня (100% safe)
 
 #### HTML
+
 ```html
 <!-- Нативные модальные окна -->
 <dialog id="modal">
-  <form method="dialog">
-    <button>Закрыть</button>
-  </form>
+    <form method="dialog">
+        <button>Закрыть</button>
+    </form>
 </dialog>
 
 <!-- Lazy loading -->
-<img src="image.jpg" loading="lazy" alt="">
+<img src="image.jpg" loading="lazy" alt="" />
 <iframe src="video.html" loading="lazy"></iframe>
 
 <!-- Улучшенный UX форм -->
-<input type="text" inputmode="decimal" enterkeyhint="next">
+<input type="text" inputmode="decimal" enterkeyhint="next" />
 ```
 
 #### CSS
+
 ```css
 /* Layout без хаков */
 .container {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .item {
-  aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
 }
 
 /* Responsive typography */
 h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 4rem);
 }
 
 /* Современные селекторы */
 :is(h1, h2, h3):is(.title, .heading) {
-  font-family: sans-serif;
+    font-family: sans-serif;
 }
 
 /* Accessibility */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #1a1a1a;
-    --text: #f0f0f0;
-  }
+    :root {
+        --bg: #1a1a1a;
+        --text: #f0f0f0;
+    }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  * {
-    animation-duration: 0.01ms !important;
-  }
+    * {
+        animation-duration: 0.01ms !important;
+    }
 }
 
 /* Умный фокус */
 :focus-visible {
-  outline: 2px solid blue;
+    outline: 2px solid blue;
 }
 
 /* Logical properties для i18n */
 .element {
-  margin-inline: 1rem;
-  padding-block: 2rem;
+    margin-inline: 1rem;
+    padding-block: 2rem;
 }
 ```
 
 #### JavaScript
+
 ```javascript
 // Modern syntax (ES2020-2022)
 const value = data?.deeply?.nested?.property ?? 'default';
@@ -431,18 +452,18 @@ element.addEventListener('click', handler, { signal: controller.signal });
 
 // Observers для производительности
 const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      lazyLoad(entry.target);
-    }
-  });
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            lazyLoad(entry.target);
+        }
+    });
 });
 
 // Performance tracking
 new PerformanceObserver((list) => {
-  for (const entry of list.getEntries()) {
-    analytics.track(entry.name, entry.value);
-  }
+    for (const entry of list.getEntries()) {
+        analytics.track(entry.name, entry.value);
+    }
 }).observe({ entryTypes: ['paint', 'lcp', 'layout-shift'] });
 ```
 
@@ -453,42 +474,43 @@ new PerformanceObserver((list) => {
 ```css
 /* Базовый layout */
 .grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
 
 /* Улучшение для subgrid (если доступен) */
 @supports (grid-template-columns: subgrid) {
-  .grid-item {
-    display: grid;
-    grid-template-columns: subgrid;
-  }
+    .grid-item {
+        display: grid;
+        grid-template-columns: subgrid;
+    }
 }
 
 /* Улучшение для :has() (если доступен) */
 @supports selector(:has(*)) {
-  .card:has(img) {
-    grid-template-columns: 200px 1fr;
-  }
+    .card:has(img) {
+        grid-template-columns: 200px 1fr;
+    }
 }
 
 /* Улучшение для Container Queries (если доступны) */
 @supports (container-type: inline-size) {
-  .container {
-    container-type: inline-size;
-  }
-
-  @container (min-width: 400px) {
-    .card {
-      flex-direction: row;
+    .container {
+        container-type: inline-size;
     }
-  }
+
+    @container (min-width: 400px) {
+        .card {
+            flex-direction: row;
+        }
+    }
 }
 ```
 
 ### Чего избегать
 
 **Deprecated/Removed:**
+
 ```javascript
 // ❌ AppCache — удалён
 <html manifest="app.appcache">
@@ -506,18 +528,19 @@ const data = await fetch('/api').then(r => r.json());
 ```
 
 **Анти-паттерны:**
+
 ```css
 /* ❌ Убирать outline без :focus-visible */
 button:focus {
-  outline: none; /* Ломает accessibility */
+    outline: none; /* Ломает accessibility */
 }
 
 /* ✅ Правильно */
 button:focus:not(:focus-visible) {
-  outline: none;
+    outline: none;
 }
 button:focus-visible {
-  outline: 2px solid blue;
+    outline: 2px solid blue;
 }
 ```
 
@@ -528,88 +551,95 @@ button:focus-visible {
 ### Фаза 1: Фундаментальные изменения (1-2 недели)
 
 **Приоритет 1 — Must know:**
+
 1. **HTML `<dialog>`** → Прочитать [html-changes.md](./html-changes.md), секция `<dialog>`
-   - Практика: создать модальное окно без библиотек
-   - Изучить accessibility автоматику
+    - Практика: создать модальное окно без библиотек
+    - Изучить accessibility автоматику
 
 2. **CSS Layout набор** → [css-changes.md](./css-changes.md), секции Layout
-   - Flexbox `gap`
-   - `aspect-ratio`
-   - Потренировать responsive cards без хаков
+    - Flexbox `gap`
+    - `aspect-ratio`
+    - Потренировать responsive cards без хаков
 
 3. **CSS функции** → [css-changes.md](./css-changes.md), секция Functions
-   - `clamp()`, `min()`, `max()`
-   - Практика: responsive typography без media queries
+    - `clamp()`, `min()`, `max()`
+    - Практика: responsive typography без media queries
 
 4. **JavaScript ES2020** → [javascript-webapis-summary.md](./javascript-webapis-summary.md), секция ES2020
-   - Optional chaining (`?.`)
-   - Nullish coalescing (`??`)
-   - Рефакторинг существующего кода с этими фичами
+    - Optional chaining (`?.`)
+    - Nullish coalescing (`??`)
+    - Рефакторинг существующего кода с этими фичами
 
 ### Фаза 2: Селекторы и улучшение workflow (1 неделя)
 
 **Приоритет 2 — Should know:**
+
 1. **CSS селекторы** → [css-changes.md](./css-changes.md)
-   - `:is()`, `:where()`
-   - `:focus-visible`
-   - Практика: упрощение сложных селекторов
+    - `:is()`, `:where()`
+    - `:focus-visible`
+    - Практика: упрощение сложных селекторов
 
 2. **Logical properties** → [css-changes.md](./css-changes.md)
-   - Изучить mapping (физические → логические)
-   - Потренировать на RTL layout
+    - Изучить mapping (физические → логические)
+    - Потренировать на RTL layout
 
 3. **JavaScript ES2021-2022** → [javascript-webapis-summary.md](./javascript-webapis-summary.md)
-   - `Array.at()`, `Object.hasOwn()`
-   - Top-level await
-   - Private class fields
+    - `Array.at()`, `Object.hasOwn()`
+    - Top-level await
+    - Private class fields
 
 ### Фаза 3: Performance и accessibility (1 неделя)
 
 **Приоритет 3 — Important:**
+
 1. **Lazy loading** → [html-changes.md](./html-changes.md)
-   - `loading="lazy"` для images и iframes
-   - Feature detection и fallbacks
+    - `loading="lazy"` для images и iframes
+    - Feature detection и fallbacks
 
 2. **Performance APIs** → [javascript-webapis-summary.md](./javascript-webapis-summary.md)
-   - Core Web Vitals tracking
-   - Intersection Observer, Resize Observer
-   - Практика: добавить performance monitoring
+    - Core Web Vitals tracking
+    - Intersection Observer, Resize Observer
+    - Практика: добавить performance monitoring
 
 3. **Accessibility media queries** → [css-changes.md](./css-changes.md)
-   - `prefers-color-scheme` — Dark mode
-   - `prefers-reduced-motion`
-   - Практика: respect user preferences
+    - `prefers-color-scheme` — Dark mode
+    - `prefers-reduced-motion`
+    - Практика: respect user preferences
 
 ### Фаза 4: Продвинутые темы (ongoing)
 
 **Приоритет 4 — Nice to have:**
+
 1. **Container Queries** (появились 2022, baseline 2023)
-   - Изучить концепцию
-   - Progressive enhancement подход
+    - Изучить концепцию
+    - Progressive enhancement подход
 
 2. **`:has()`** (появился 2022, baseline 2023)
-   - Новые паттерны дизайна
-   - Feature detection
+    - Новые паттерны дизайна
+    - Feature detection
 
 3. **`@property`** (Chrome 2020, baseline 2024)
-   - Typed custom properties
-   - Houdini APIs
+    - Typed custom properties
+    - Houdini APIs
 
 ### Практические проекты для закрепления
 
 **Проект 1: Modern Landing Page**
+
 - Использовать: `aspect-ratio`, `clamp()`, Flexbox `gap`, `<dialog>`
 - Dark mode через `prefers-color-scheme`
 - Lazy loading изображений
 - Performance tracking (Core Web Vitals)
 
 **Проект 2: Accessible Form Component**
+
 - Native `<dialog>` для modals
 - `enterkeyhint`, `inputmode` для mobile UX
 - `:focus-visible` для keyboard navigation
 - `inert` для модального состояния (если доступен)
 
 **Проект 3: Responsive Card Grid**
+
 - CSS Grid с `gap`
 - `aspect-ratio` для media
 - `:is()`, `:where()` для селекторов
@@ -622,17 +652,20 @@ button:focus-visible {
 ### Первичные источники
 
 **Спецификации:**
+
 - WHATWG HTML Living Standard: https://html.spec.whatwg.org
 - W3C CSS Working Group: https://www.w3.org/Style/CSS/
 - TC39 ECMAScript Proposals: https://github.com/tc39/proposals
 
 **Browser Release Notes:**
+
 - Chrome: https://chromereleases.googleblog.com, https://chromestatus.com
 - Firefox: https://www.mozilla.org/firefox/releases/, https://developer.mozilla.org/Firefox
 - Safari: https://developer.apple.com/documentation/safari-release-notes, https://webkit.org/blog/
 - Edge: https://learn.microsoft.com/deployedge/microsoft-edge-release-schedule
 
 **Compatibility данные:**
+
 - MDN Browser Compatibility Data: https://github.com/mdn/browser-compat-data
 - Can I Use: https://caniuse.com
 - web.dev Baseline: https://web.dev/baseline
@@ -640,11 +673,13 @@ button:focus-visible {
 ### Обучающие ресурсы
 
 **Официальные:**
+
 - MDN Web Docs: https://developer.mozilla.org
 - web.dev: https://web.dev (Google)
 - WebKit Blog: https://webkit.org/blog/
 
 **Community:**
+
 - CSS-Tricks: https://css-tricks.com
 - Smashing Magazine: https://www.smashingmagazine.com
 - JavaScript Weekly: https://javascriptweekly.com
@@ -688,6 +723,7 @@ button:focus-visible {
 - **View Transitions API** — плавные переходы между страницами
 
 **Для следующего исследования (2023+):**
+
 - Продолжение Container Queries adoption
 - View Transitions API
 - Popover API

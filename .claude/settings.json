@@ -1,19 +1,17 @@
 {
-  "permissions": {
-    "allow": [
-      "Bash(mkdir:*)",
-      "Bash(grep:*)",
-      "Bash(cat:*)",
-      "Bash(tree:*)",
-      "Bash(find:*)",
-      "WebSearch",
-      "WebFetch(domain:caniuse.com)",
-      "WebFetch(domain:developer.mozilla.org)"
-    ],
-    "deny": [],
-    "ask": []
-  },
-  "enabledMcpjsonServers": [
-    "puppeteer"
-  ]
+    "permissions": {
+        "allow": [
+            "Bash(mkdir:*)",
+            "Bash(grep:*)",
+            "Bash(cat:*)",
+            "Bash(tree:*)",
+            "Bash(find:*)",
+            "WebSearch",
+            "WebFetch(domain:caniuse.com)",
+            "WebFetch(domain:developer.mozilla.org)"
+        ],
+        "deny": [],
+        "ask": []
+    },
+    "enabledMcpjsonServers": ["puppeteer"]
 }

@@ -1,29 +1,28 @@
-# Frontend Development: Изменения 2018–2022
-
-**Research ID:** `frontend-baseline-2018-2022`
-**Дата создания:** 17.11.2025
-**Методология:** DeepResearch-Claude
-
 ---
+title: Frontend Baseline 2018-2022
+description: Комплексный исследование изменений в HTML, CSS и JavaScript за период 2018-2022
+outline: deep
+lastUpdated: true
+---
+
+# Frontend Development: Изменения 2018–2022
 
 ## 🎯 Начните отсюда
 
-Для быстрого старта откройте **[final-report.md](./knowledge/final-report.md)** — comprehensive обзор всего периода с executive summary, timeline, insights и roadmap для изучения.
-
----
+Для быстрого старта откройте **[final-report.md](./knowledge/final-report.md)** — комплексный обзор всего периода с executive summary, timeline, insights и roadmap для изучения.
 
 ## 📚 Структура исследования
 
 ### Основные документы (knowledge/)
 
-| Файл | Описание | Размер |
-|------|----------|--------|
-| **[final-report.md](./knowledge/final-report.md)** | 🌟 **НАЧАТЬ ЗДЕСЬ** — Executive summary, timeline, insights, roadmap | ~30 KB |
-| [scope.md](./knowledge/scope.md) | Границы исследования, критерии, методология | 12 KB |
-| [browser-timeline.md](./knowledge/browser-timeline.md) | Timeline релизов браузеров 2018–2022, baseline методология | 20 KB |
-| [html-changes.md](./knowledge/html-changes.md) | Детальный обзор HTML изменений с примерами кода | 36 KB |
-| [css-changes.md](./knowledge/css-changes.md) | Comprehensive CSS изменения с практическими примерами | 28 KB |
-| [javascript-webapis-summary.md](./knowledge/javascript-webapis-summary.md) | Ключевые JavaScript (ES2018–ES2022) и Web APIs изменения | ~20 KB |
+| Файл                                                                       | Описание                                                             | Размер |
+| -------------------------------------------------------------------------- | -------------------------------------------------------------------- | ------ |
+| **[final-report.md](./knowledge/final-report.md)**                         | 🌟 **НАЧАТЬ ЗДЕСЬ** — Executive summary, timeline, insights, roadmap | ~30 KB |
+| [browser-timeline.md](./knowledge/browser-timeline.md)                     | Timeline релизов браузеров 2018–2022, baseline методология           | 20 KB  |
+| [html-changes.md](./knowledge/html-changes.md)                             | Детальный обзор HTML изменений с примерами кода                      | 36 KB  |
+| [css-changes.md](./knowledge/css-changes.md)                               | Comprehensive CSS изменения с практическими примерами                | 28 KB  |
+| [javascript-webapis-summary.md](./knowledge/javascript-webapis-summary.md) | Ключевые JavaScript (ES2018–ES2022) и Web APIs изменения             | ~20 KB |
+| [scope.md](./knowledge/scope.md)                                           | Границы исследования, критерии, методология                          | 12 KB  |
 
 **Всего:** ~146 KB детальных материалов
 
@@ -34,25 +33,30 @@
 ### Ключевые baseline достижения по годам
 
 **2018:**
+
 - CSS Flexbox `gap` в Firefox
 - Overscroll-behavior
 
 **2019:**
+
 - Optional chaining в TC39 Stage 3
 - `prefers-color-scheme`
 
 **2020:**
+
 - ES2020: optional chaining (`?.`), nullish coalescing (`??`)
 - `clamp()`, `min()`, `max()`
 - `prefers-reduced-motion`
 - Resize Observer
 
 **2021:**
+
 - Flexbox `gap` baseline (апрель)
 - `aspect-ratio` baseline (сентябрь)
 - `:is()`, `:where()` baseline
 
 **2022:**
+
 - `<dialog>` baseline (март)
 - `:focus-visible` baseline (март)
 - `:has()` появился (baseline 2023)
@@ -73,9 +77,9 @@
 2. **[scope.md](./knowledge/scope.md)** — поймите границы и методологию
 3. **[browser-timeline.md](./knowledge/browser-timeline.md)** — контекст релизов и baseline
 4. Затем углубляйтесь в интересующие технологии:
-   - **[html-changes.md](./knowledge/html-changes.md)** — если интересует HTML
-   - **[css-changes.md](./knowledge/css-changes.md)** — если интересует CSS
-   - **[javascript-webapis-summary.md](./knowledge/javascript-webapis-summary.md)** — если интересует JS/APIs
+    - **[html-changes.md](./knowledge/html-changes.md)** — если интересует HTML
+    - **[css-changes.md](./knowledge/css-changes.md)** — если интересует CSS
+    - **[javascript-webapis-summary.md](./knowledge/javascript-webapis-summary.md)** — если интересует JS/APIs
 
 ---
 
@@ -105,26 +109,26 @@
 
 ```html
 <dialog id="modal">...</dialog>
-<img src="image.jpg" loading="lazy">
-<input type="text" inputmode="decimal" enterkeyhint="next">
+<img src="image.jpg" loading="lazy" />
+<input type="text" inputmode="decimal" enterkeyhint="next" />
 ```
 
 ```css
 .container {
-  display: flex;
-  gap: 1rem;
+    display: flex;
+    gap: 1rem;
 }
 
 .item {
-  aspect-ratio: 16 / 9;
+    aspect-ratio: 16 / 9;
 }
 
 h1 {
-  font-size: clamp(2rem, 5vw, 4rem);
+    font-size: clamp(2rem, 5vw, 4rem);
 }
 
 :focus-visible {
-  outline: 2px solid blue;
+    outline: 2px solid blue;
 }
 ```
 
@@ -139,15 +143,15 @@ fetch('/api', { signal: controller.signal });
 
 ```css
 @supports (container-type: inline-size) {
-  .container {
-    container-type: inline-size;
-  }
+    .container {
+        container-type: inline-size;
+    }
 }
 
 @supports selector(:has(*)) {
-  .card:has(img) {
-    grid-template-columns: 200px 1fr;
-  }
+    .card:has(img) {
+        grid-template-columns: 200px 1fr;
+    }
 }
 ```
 
@@ -167,16 +171,19 @@ fetch('/api', { signal: controller.signal });
 ## 🔗 Внешние ресурсы
 
 ### Первичные источники
+
 - [WHATWG HTML Living Standard](https://html.spec.whatwg.org)
 - [W3C CSS Working Group](https://www.w3.org/Style/CSS/)
 - [TC39 ECMAScript Proposals](https://github.com/tc39/proposals)
 
 ### Compatibility данные
+
 - [MDN Browser Compatibility Data](https://github.com/mdn/browser-compat-data)
 - [Can I Use](https://caniuse.com)
 - [web.dev Baseline](https://web.dev/baseline)
 
 ### Обучающие ресурсы
+
 - [MDN Web Docs](https://developer.mozilla.org)
 - [web.dev](https://web.dev)
 - [CSS-Tricks](https://css-tricks.com)
@@ -189,6 +196,7 @@ fetch('/api', { signal: controller.signal });
 
 ---
 
-**Создано:** 17.11.2025
-**Методология:** DeepResearch-Claude Agent
-**Версия:** 1.0
+- **Research ID:** `frontend-baseline-2018-2022`
+- **Дата создания:** 17.11.2025
+- **Методология:** DeepResearch-Claude
+- **Версия:** 1.0

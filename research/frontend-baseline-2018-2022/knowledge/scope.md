@@ -1,3 +1,10 @@
+---
+title: Scope исследования
+description: Границы, методология и критерии отбора для исследования Frontend Baseline 2018-2022
+outline: deep
+lastUpdated: true
+---
+
 # Scope исследования: Frontend Baseline 2018–2022
 
 ## Временные границы
@@ -6,6 +13,7 @@
 **Конец:** 31 декабря 2022
 
 Исследование охватывает изменения, которые:
+
 - Были **анонсированы** или **вошли в спецификацию** в указанный период
 - Достигли **baseline статуса** (поддержка во всех основных браузерах) к концу 2022 или в течение этого периода
 - Имеют **значительное практическое влияние** на frontend-разработку
@@ -15,6 +23,7 @@
 ### 1. HTML (HyperText Markup Language)
 
 **Включаем:**
+
 - Новые элементы (например, `<dialog>`)
 - Новые атрибуты для существующих элементов
 - Изменения в семантике или поведении элементов
@@ -23,12 +32,14 @@
 - Loading и performance атрибуты
 
 **Исключаем:**
+
 - Экспериментальные предложения без baseline поддержки
 - Микрофичи без практического влияния
 
 ### 2. CSS (Cascading Style Sheets)
 
 **Включаем:**
+
 - Новые CSS свойства
 - Новые CSS селекторы и pseudo-классы/элементы
 - Новые CSS функции (`clamp()`, `min()`, `max()`, color functions)
@@ -40,6 +51,7 @@
 - Responsive и адаптивные фичи
 
 **Исключаем:**
+
 - Vendor-specific свойства без стандартизации
 - Экспериментальные Houdini APIs без широкой поддержки
 
@@ -48,9 +60,11 @@
 **Включаем:**
 
 #### ECMAScript (2018–2022)
+
 - Языковые фичи ES2018–ES2022, достигшие baseline в браузерах
 
 #### Web APIs — категории для исследования:
+
 - **DOM и UI:** Observers (Intersection, Resize, Mutation), Visual Viewport API
 - **Performance:** Paint Timing, Element Timing, Layout Instability (Core Web Vitals)
 - **Loading:** Native lazy loading, Module scripts improvements
@@ -63,6 +77,7 @@
 - **Workers:** Module workers, SharedArrayBuffer возвращение
 
 **Исключаем:**
+
 - Экспериментальные APIs без baseline статуса
 - Node.js-специфичные фичи
 - Frameworks и библиотеки (React, Vue и т.д.)
@@ -70,6 +85,7 @@
 ## Браузеры в scope
 
 **Основные (для определения baseline):**
+
 1. Google Chrome / Chromium
 2. Mozilla Firefox
 3. Apple Safari (macOS и iOS)
@@ -80,24 +96,26 @@
 ## Источники данных
 
 ### Первичные источники:
+
 1. **Официальные спецификации:**
-   - W3C Recommendations и Working Drafts
-   - WHATWG Living Standards
-   - TC39 ECMAScript proposals (stage 4)
+    - W3C Recommendations и Working Drafts
+    - WHATWG Living Standards
+    - TC39 ECMAScript proposals (stage 4)
 
 2. **Релиз-ноуты браузеров:**
-   - Chrome Platform Status и Chromium Blog
-   - Firefox Release Notes и Mozilla Hacks
-   - WebKit Feature Status и Safari Release Notes
-   - Microsoft Edge Release Notes
+    - Chrome Platform Status и Chromium Blog
+    - Firefox Release Notes и Mozilla Hacks
+    - WebKit Feature Status и Safari Release Notes
+    - Microsoft Edge Release Notes
 
 3. **Документация и compatibility данные:**
-   - MDN Web Docs (Mozilla Developer Network)
-   - Can I Use (caniuse.com)
-   - web-platform-tests
-   - Baseline features tracking (web.dev/baseline)
+    - MDN Web Docs (Mozilla Developer Network)
+    - Can I Use (caniuse.com)
+    - web-platform-tests
+    - Baseline features tracking (web.dev/baseline)
 
 ### Вторичные источники:
+
 - Issue trackers браузеров (Chromium, Mozilla, WebKit bugs)
 - W3C и WHATWG GitHub repositories
 - Технические блоги признанных экспертов
@@ -108,22 +126,22 @@
 Изменение включается в исследование, если оно соответствует **хотя бы одному** из критериев:
 
 1. **Высокое практическое влияние:**
-   - Решает частую проблему разработчиков
-   - Улучшает производительность или UX значительно
-   - Упрощает или заменяет сложные паттерны
+    - Решает частую проблему разработчиков
+    - Улучшает производительность или UX значительно
+    - Упрощает или заменяет сложные паттерны
 
 2. **Широкое применение:**
-   - Используется в популярных production приложениях
-   - Рекомендуется в best practices
+    - Используется в популярных production приложениях
+    - Рекомендуется в best practices
 
 3. **Архитектурная значимость:**
-   - Вводит новую парадигму или подход
-   - Является основой для будущих фич
-   - Меняет mentality разработчиков
+    - Вводит новую парадигму или подход
+    - Является основой для будущих фич
+    - Меняет mentality разработчиков
 
 4. **Deprecation impact:**
-   - Депрекация влияет на существующий production-код
-   - Требует миграции или рефакторинга
+    - Депрекация влияет на существующий production-код
+    - Требует миграции или рефакторинга
 
 ## Структура итогового отчёта
 
@@ -170,6 +188,7 @@ final-report.md
 ## Ограничения исследования
 
 ### Сознательно исключаем:
+
 1. Фреймворки и библиотеки (React, Vue, Angular, Svelte и др.)
 2. Build tools и транспайлеры (Webpack, Vite, Babel и др.)
 3. CSS препроцессоры и постпроцессоры (Sass, Less, PostCSS и др.)
@@ -177,6 +196,7 @@ final-report.md
 5. Серверные технологии и Node.js (кроме тех, что влияют на клиентскую разработку)
 
 ### Технические ограничения:
+
 1. **Актуальность данных:** Исследование опирается на источники, актуальные на момент 02.11.2025
 2. **Глубина анализа:** Фокус на практическом применении, а не на теоретических деталях спецификаций
 3. **Субъективность значимости:** Оценка влияния основана на анализе community feedback и экспертных мнений
@@ -190,8 +210,6 @@ final-report.md
 3. **Практического применения** — внедрение новых возможностей в реальные проекты
 4. **Справочного материала** — быстрый поиск информации о конкретной фиче
 
----
-
-**Дата создания:** 17.11.2025
-**Исследователь:** DeepResearch-Claude
-**Research ID:** `frontend-baseline-2018-2022`
+- **Research ID:** `frontend-baseline-2018-2022`
+- **Дата создания:** 17.11.2025
+- **Методология:** DeepResearch-Claude
