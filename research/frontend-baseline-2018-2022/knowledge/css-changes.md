@@ -131,8 +131,6 @@ lastUpdated: true
 - Единообразие с CSS Grid (где `gap` уже был)
 - Часть **Compat 2021** инициативы — top compatibility pain point
 
----
-
 ### `aspect-ratio` — нативные пропорции
 
 **Браузерная поддержка:**
@@ -195,8 +193,6 @@ lastUpdated: true
 - Улучшение Core Web Vitals (CLS — Cumulative Layout Shift)
 - Поддержка responsive media без JavaScript
 
----
-
 ### Container Queries — начало новой эры (конец периода)
 
 **Браузерная поддержка:**
@@ -251,8 +247,6 @@ lastUpdated: true
 Смена парадигмы: от **viewport-based** к **container-based** адаптивному дизайну.
 
 **Полифилл:** Google Chrome Labs создал polyfill (maintenance mode с ноября 2022).
-
----
 
 ## Селекторы и Pseudo-классы
 
@@ -326,8 +320,6 @@ lastUpdated: true
     margin-top: 0.5rem; /* Работает без !important */
 }
 ```
-
----
 
 ### `:has()` — "родительский" селектор (конец периода)
 
@@ -404,8 +396,6 @@ article:has(> h2):has(> .featured-image) {
 }
 ```
 
----
-
 ### `:focus-visible` — умный фокус
 
 **Браузерная поддержка:**
@@ -454,8 +444,6 @@ button:focus:not(:focus-visible) {
 #### Поведение браузера
 
 С 2022 **все основные браузеры** изменили user-agent stylesheets, заменив `:focus` на `:focus-visible` для элементов управления.
-
----
 
 ## Функции
 
@@ -541,8 +529,6 @@ p {
     grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 }
 ```
-
----
 
 ## Свойства
 
@@ -649,8 +635,6 @@ html[dir='rtl'] .card {
 }
 ```
 
----
-
 ### `backdrop-filter` — эффекты фона
 
 **Браузерная поддержка:**
@@ -714,8 +698,6 @@ backdrop-filter: blur(10px) saturate(150%) contrast(1.1);
 }
 ```
 
----
-
 ### `overscroll-behavior` — контроль scroll chaining
 
 **Браузерная поддержка:**
@@ -756,8 +738,6 @@ body {
 - `auto` — дефолтное поведение (scroll chaining)
 - `contain` — блокирует scroll chaining
 - `none` — блокирует scroll chaining + bounce effects + pull-to-refresh
-
----
 
 ## Media Queries Level 5
 
@@ -819,8 +799,6 @@ body {
 }
 ```
 
----
-
 ### `prefers-reduced-motion` — уважение к пользователю
 
 **Браузерная поддержка:**
@@ -873,8 +851,6 @@ body {
     }
 }
 ```
-
----
 
 ## Custom Properties и Houdini
 
@@ -958,8 +934,6 @@ body {
 }
 ```
 
----
-
 ## Выводы
 
 ### Ключевые тренды CSS 2018–2022
@@ -1039,8 +1013,6 @@ body {
     }
 }
 ```
-
----
 
 **Источники:**
 

@@ -7,10 +7,10 @@ lastUpdated: true
 
 # Frontend Development: Comprehensive изменения 2018–2022
 
-**Research ID:** `frontend-baseline-2018-2022`
-**Дата:** 17.11.2025
-**Целевая аудитория:** Опытный frontend-разработчик (15+ лет опыта)
-**Период исследования:** 1 января 2018 — 31 декабря 2022
+- **Research ID:** `frontend-baseline-2018-2022`
+- **Дата:** 17.11.2025
+- **Целевая аудитория:** Опытный frontend-разработчик (15+ лет опыта)
+- **Период исследования:** 1 января 2018 — 31 декабря 2022
 
 ## Executive Summary
 
@@ -64,12 +64,12 @@ lastUpdated: true
 
 ### 📁 Основные документы
 
-1. **[scope.md](./scope.md)** — границы исследования, критерии, методология
-2. **[browser-timeline.md](./browser-timeline.md)** — timeline релизов браузеров, baseline методология
-3. **[html-changes.md](./html-changes.md)** — детальный обзор HTML изменений с примерами
-4. **[css-changes.md](./css-changes.md)** — comprehensive CSS изменения
-5. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JavaScript и Web API изменения
-6. **[final-report.md](./final-report.md)** — этот документ (executive summary и roadmap)
+1. **[html-changes.md](./html-changes.md)** — детальный обзор HTML изменений с примерами
+2. **[css-changes.md](./css-changes.md)** — comprehensive CSS изменения
+3. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JavaScript и Web API изменения
+4. **[final-report.md](./final-report.md)** — этот документ (executive summary и roadmap)
+5. **[scope.md](./scope.md)** — границы исследования, критерии, методология
+6. **[browser-timeline.md](./browser-timeline.md)** — timeline релизов браузеров, baseline методология
 
 ## Timeline ключевых событий
 
@@ -366,8 +366,6 @@ new PerformanceObserver((list) => {
 - **Subgrid** — долгожданное завершение Grid (baseline 2023)
 - **`@property`** — typed custom properties (baseline 2024)
 
----
-
 ## Практические рекомендации
 
 ### Что использовать сегодня (100% safe)
@@ -544,8 +542,6 @@ button:focus-visible {
 }
 ```
 
----
-
 ## Roadmap для изучения
 
 ### Фаза 1: Фундаментальные изменения (1-2 недели)
@@ -645,8 +641,6 @@ button:focus-visible {
 - `:is()`, `:where()` для селекторов
 - Container Queries (progressive enhancement)
 
----
-
 ## Источники и дополнительные материалы
 
 ### Первичные источники
@@ -688,13 +682,11 @@ button:focus-visible {
 ### Recommended Reading Order
 
 1. **Этот файл** (`final-report.md`) — executive summary и roadmap
-2. **[scope.md](./scope.md)** — понять границы исследования
-3. **[browser-timeline.md](./browser-timeline.md)** — контекст релизов
-4. **[html-changes.md](./html-changes.md)** — детально HTML (70+ KB)
-5. **[css-changes.md](./css-changes.md)** — детально CSS (50+ KB)
-6. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JS/API изменения
-
----
+2. **[html-changes.md](./html-changes.md)** — детально HTML (70+ KB)
+3. **[css-changes.md](./css-changes.md)** — детально CSS (50+ KB)
+4. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JS/API изменения
+5. **[scope.md](./scope.md)** — понять границы исследования
+6. **[browser-timeline.md](./browser-timeline.md)** — контекст релизов
 
 ## Заключение
 
@@ -730,8 +722,6 @@ button:focus-visible {
 - Anchor Positioning
 - CSS Nesting native support
 - И многое другое...
-
----
 
 **Последнее обновление:** 17.11.2025
 **Исследователь:** DeepResearch-Claude

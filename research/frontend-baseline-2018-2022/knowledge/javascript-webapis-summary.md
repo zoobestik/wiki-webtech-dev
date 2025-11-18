@@ -208,8 +208,6 @@ try {
 }
 ```
 
----
-
 ## Web APIs — Observers
 
 ### Intersection Observer v2
@@ -265,8 +263,6 @@ observer.observe(element);
 
 **Заменяет:** window.resize listeners с лучшей производительностью
 
----
-
 ## Performance APIs — Core Web Vitals
 
 ### Paint Timing API
@@ -320,8 +316,6 @@ const observer = new PerformanceObserver((list) => {
 observer.observe({ type: 'layout-shift', buffered: true });
 ```
 
----
-
 ## Async & Control Flow
 
 ### AbortController / AbortSignal
@@ -348,8 +342,6 @@ setTimeout(() => controller.abort(), 5000);
 element.addEventListener('click', handler, { signal });
 controller.abort(); // Автоматически removeEventListener
 ```
-
----
 
 ## Storage & State
 
@@ -384,8 +376,6 @@ request.onsuccess = (event) => {
 };
 ```
 
----
-
 ## Media APIs
 
 ### Picture-in-Picture API
@@ -412,8 +402,6 @@ video.addEventListener('leavepictureinpicture', () => {
 // Выйти из PiP
 document.exitPictureInPicture();
 ```
-
----
 
 ## Network APIs
 
@@ -444,8 +432,6 @@ while (true) {
     processChunk(value);
 }
 ```
-
----
 
 ## Security & Permissions
 
@@ -482,8 +468,6 @@ result.addEventListener('change', () => {
 ```http
 Permissions-Policy: camera=(), microphone=(), geolocation=(self)
 ```
-
----
 
 ## Module Systems
 
@@ -529,9 +513,7 @@ button.addEventListener('click', async () => {
 </script>
 ```
 
----
-
-## Депрекации и удаления
+№# Депрекации и удаления
 
 ### AppCache (см. HTML changes)
 
@@ -555,8 +537,6 @@ xhr.send();
 
 // ✅ Используйте fetch или async XMLHttpRequest
 ```
-
----
 
 ## Выводы и практические рекомендации
 
@@ -620,8 +600,6 @@ const observer = new PerformanceObserver((list) => {
 
 observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shift'] });
 ```
-
----
 
 **Источники:**
 

@@ -94,8 +94,6 @@ lastUpdated: true
 | Chrome 107 | 25 октября 2022  |                  |
 | Chrome 108 | 29 ноября 2022   |                  |
 
----
-
 ## Mozilla Firefox
 
 ### Особенности релизного цикла
@@ -179,8 +177,6 @@ lastUpdated: true
 | Firefox 106 | 18 октября 2022  |                  |
 | Firefox 107 | 15 ноября 2022   |                  |
 
----
-
 ## Apple Safari / WebKit
 
 ### Особенности релизного цикла
@@ -227,8 +223,6 @@ lastUpdated: true
 | Safari 16.0 | 12 сентября 2022 | macOS Ventura, iOS 16 | Container Queries, Subgrid, `:has()` improvements, Passkeys            |
 
 **Важная деталь:** С Safari 11.1 WebKit версия в User-Agent была "заморожена" как `605.1.15` из соображений приватности.
-
----
 
 ## Microsoft Edge
 
@@ -313,8 +307,6 @@ Edge продолжает синхронизацию с Chrome на 4-недел
 | Edge 107 | Конец октября 2022    |
 | Edge 108 | Конец ноября 2022     |
 
----
-
 ## Сравнительная статистика
 
 ### Количество мажорных релизов за период 2018–2022
@@ -351,8 +343,6 @@ gantt
     EdgeHTML :2018-01, 2020-01
     Chromium sync :2020-01, 2022-12
 ```
-
----
 
 ## Выводы
 
@@ -405,8 +395,6 @@ gantt
 - [WebKit Feature Status](https://webkit.org/status/)
 - [Chrome Platform Status](https://chromestatus.com)
 - [Firefox Platform Status](https://platform-status.mozilla.org)
-
----
 
 **Источники:**
 
