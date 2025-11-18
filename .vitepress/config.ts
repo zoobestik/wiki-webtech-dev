@@ -7,6 +7,8 @@ export default withMermaid(
         outDir: './dist',
         base: '/wiki-webtech-dev/',
 
+        srcExclude: ['**/tmp/**'],
+
         title: 'Research Hub',
         description: 'Коллекция глубоких исследований по frontend-разработке и веб-технологиям',
 
