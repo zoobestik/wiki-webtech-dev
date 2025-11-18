@@ -14,7 +14,7 @@ export default withMermaid(
             nav: [
                 { text: 'Research Hub', link: '/' },
                 {
-                    text: 'Исследования',
+                    text: 'Результаты',
                     items: [
                         {
                             text: 'Frontend Baseline 2018-2022',
@@ -84,7 +84,9 @@ export default withMermaid(
                 ],
             },
 
-            socialLinks: [],
+            socialLinks: [
+                { icon: 'github', link: 'https://github.com/zoobestik/wiki-webtech-dev' },
+            ],
 
             search: {
                 provider: 'local',
