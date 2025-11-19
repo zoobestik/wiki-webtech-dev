@@ -1,6 +1,9 @@
 ---
 title: 'HTTP, Protocols & Security — изменения 2024 года'
-description: 'Комплексный обзор изменений в HTTP, сетевых протоколах и веб-безопасности за 2024 год - отмена third-party cookies, постквантовая криптография, HTTP/3, passkeys, bounce tracking protection и практические рекомендации'
+description:
+    'Комплексный обзор изменений в HTTP, сетевых протоколах и веб-безопасности за 2024 год - отмена
+    third-party cookies, постквантовая криптография, HTTP/3, passkeys, bounce tracking protection и
+    практические рекомендации'
 outline: deep
 lastUpdated: true
 ---
@@ -12,14 +15,18 @@ lastUpdated: true
 
 ## Обзор года
 
-2024 год стал годом кардинальных изменений в веб-экосистеме. Ключевым событием стала отмена планов по deprecation third-party cookies в Chrome (июль 2024), что радикально изменило направление индустрии. Параллельно произошло массовое внедрение постквантовой криптографии, достижение Baseline-статуса для критически важных API, и усиление защиты от tracking.
+2024 год стал годом кардинальных изменений в веб-экосистеме. Ключевым событием стала отмена планов
+по deprecation third-party cookies в Chrome (июль 2024), что радикально изменило направление
+индустрии. Параллельно произошло массовое внедрение постквантовой криптографии, достижение
+Baseline-статуса для критически важных API, и усиление защиты от tracking.
 
 ### Ключевые темы года
 
 - **Великий разворот cookies**: Google отменил deprecation third-party cookies (22 июля 2024)
 - **Постквантовая эра**: ML-KEM в Chrome 124, финальный стандарт в Chrome 131
 - **HTTP/3 adoption**: рост до 30%+ трафика, стабилизация экосистемы
-- **Baseline-достижения**: Fetch Priority, Priority header, `bytes()` method, `keepalive` (октябрь-ноябрь 2024)
+- **Baseline-достижения**: Fetch Priority, Priority header, `bytes()` method, `keepalive`
+  (октябрь-ноябрь 2024)
 - **Passkeys mainstream**: 1+ миллиард аутентификаций, WebAuthn Level 3
 - **Bounce tracking protection**: Firefox 133 присоединился к Safari и Chrome
 - **Service Worker innovations**: Static Routing API (Chrome 123)
@@ -39,7 +46,8 @@ HTTP-протоколы и безопасность остаются нераз�
 
 ### 1. HTTP/3 — массовая адаптация
 
-**HTTP/3** базируется на протоколе QUIC (UDP вместо TCP) и включает встроенную поддержку TLS 1.3. 2024 год стал переломным для адаптации протокола в production.
+**HTTP/3** базируется на протоколе QUIC (UDP вместо TCP) и включает встроенную поддержку TLS 1.3.
+2024 год стал переломным для адаптации протокола в production.
 
 #### 1.1 Статус браузерной поддержки
 
@@ -127,7 +135,8 @@ HTTP-протоколы и безопасность остаются нераз�
 
 **Expected Widely Available**: 29 апреля 2027
 
-**Назначение**: HTTP header для коммуникации начального приоритета запроса HTTP version-independent способом, часть "Extensible Prioritization Scheme for HTTP" (RFC 9218).
+**Назначение**: HTTP header для коммуникации начального приоритета запроса HTTP version-independent
+способом, часть "Extensible Prioritization Scheme for HTTP" (RFC 9218).
 
 **Browser Support**:
 
@@ -154,7 +163,8 @@ Priority: u=<priority>, i
 - Firefox и Safari используют HTTP header
 - Chromium использует только PRIORITY_UPDATE frame вместо HTTP header для initial priority signaling
 - Работает через HTTP/1.1, HTTP/2, и HTTP/3
-- HTTP/2 и HTTP/3 также поддерживают PRIORITY_UPDATE frames для re-prioritization после initial request transmission
+- HTTP/2 и HTTP/3 также поддерживают PRIORITY_UPDATE frames для re-prioritization после initial
+  request transmission
 
 **Практический пример**:
 
@@ -175,7 +185,8 @@ Host: analytics.example.com
 Priority: u=7
 ```
 
-**Связь с fetchpriority**: HTML attribute `fetchpriority` (см. ниже) комплементарен Priority header — первый задаётся на client-side, второй передаётся в request.
+**Связь с fetchpriority**: HTML attribute `fetchpriority` (см. ниже) комплементарен Priority header
+— первый задаётся на client-side, второй передаётся в request.
 
 **Specification**: RFC 9218 — Extensible Prioritization Scheme for HTTP
 
@@ -192,7 +203,8 @@ Priority: u=7
 
 **Expected Widely Available**: 29 апреля 2027
 
-**Назначение**: HTML атрибут `fetchpriority` и fetch() priority опция предоставляют hints браузеру о том, какие запросы выполнить раньше других запросов того же типа.
+**Назначение**: HTML атрибут `fetchpriority` и fetch() priority опция предоставляют hints браузеру о
+том, какие запросы выполнить раньше других запросов того же типа.
 
 **Browser Support**:
 
@@ -218,7 +230,14 @@ Priority: u=7
 <img src="/images/hero-banner.jpg" fetchpriority="high" alt="Hero banner" />
 
 <!-- Preload критического шрифта -->
-<link rel="preload" href="/fonts/primary.woff2" as="font" type="font/woff2" fetchpriority="high" crossorigin />
+<link
+    rel="preload"
+    href="/fonts/primary.woff2"
+    as="font"
+    type="font/woff2"
+    fetchpriority="high"
+    crossorigin
+/>
 
 <!-- Low priority аналитика -->
 <script src="/analytics/tracker.js" fetchpriority="low" async></script>
@@ -266,11 +285,14 @@ fetch('/api/secondary-data', {
 
 **Статус**: Поддерживается в major browsers (2024)
 
-**Назначение**: HTTP 103 Early Hints informational response позволяет серверам отправлять preliminary HTTP headers пока готовится full response, давая браузерам возможность preconnect к сайтам или начать preloading ресурсов.
+**Назначение**: HTTP 103 Early Hints informational response позволяет серверам отправлять
+preliminary HTTP headers пока готовится full response, давая браузерам возможность preconnect к
+сайтам или начать preloading ресурсов.
 
 **Browser Support**:
 
-- **Chrome**: версия 103+ (поддержка preload и preconnect в Early Hints для top-level frame navigation)
+- **Chrome**: версия 103+ (поддержка preload и preconnect в Early Hints для top-level frame
+  navigation)
 - **Edge**: версия 103+
 - **Firefox**: limited support
 - **Safari**: support status varies
@@ -347,7 +369,9 @@ app.get('/', async (req, res) => {
 
 **Статус**: **Baseline Widely Available** (март 2023)
 
-**Назначение**: HTTP Server-Timing response header коммуницирует одну или несколько performance метрик о request-response cycle к user agent, отображая backend server timing metrics в developer tools.
+**Назначение**: HTTP Server-Timing response header коммуницирует одну или несколько performance
+метрик о request-response cycle к user agent, отображая backend server timing metrics в developer
+tools.
 
 **Browser Support**: Доступен во всех браузерах с марта 2023
 
@@ -374,7 +398,8 @@ Server-Timing: api;dur=123.4;desc="API call"
 **Security Considerations**:
 
 - Restricted to same origin по умолчанию
-- Используйте `Timing-Allow-Origin` header для указания domains, которым разрешён доступ к server metrics
+- Используйте `Timing-Allow-Origin` header для указания domains, которым разрешён доступ к server
+  metrics
 
 **Практический пример**:
 
@@ -406,7 +431,7 @@ app.get('/api/data', async (req, res) => {
         `db;desc="Database Query";dur=${dbDuration}, ` +
             `api;desc="External API";dur=${apiDuration}, ` +
             `cache;desc="Cache Write";dur=${cacheDuration}, ` +
-            `total;desc="Total";dur=${totalDuration}`
+            `total;desc="Total";dur=${totalDuration}`,
     );
 
     res.json(enrichedData);
@@ -425,7 +450,9 @@ if (navTiming.serverTiming) {
 }
 
 // Получить server timing из Resource Timing API
-const resourceTiming = performance.getEntriesByType('resource').find((r) => r.name.includes('/api/data'));
+const resourceTiming = performance
+    .getEntriesByType('resource')
+    .find((r) => r.name.includes('/api/data'));
 
 if (resourceTiming && resourceTiming.serverTiming) {
     resourceTiming.serverTiming.forEach((entry) => {
@@ -489,7 +516,9 @@ if (resourceTiming && resourceTiming.serverTiming) {
 
 **Sec-Fetch-Dest**: Указывает destination запроса
 
-**Values**: `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `frame`, `iframe`, `image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`, `style`, `track`, `video`, `worker`, `xslt`
+**Values**: `audio`, `audioworklet`, `document`, `embed`, `empty`, `font`, `frame`, `iframe`,
+`image`, `manifest`, `object`, `paintworklet`, `report`, `script`, `serviceworker`, `sharedworker`,
+`style`, `track`, `video`, `worker`, `xslt`
 
 **Sec-Fetch-User**: Указывает, был ли navigation request инициирован user activation
 
@@ -552,7 +581,8 @@ app.use('/api/*', fetchMetadataPolicy);
 app.use('/admin/*', fetchMetadataPolicy);
 ```
 
-**Important Note**: Это Fetch Metadata Request Headers, предложенные Google. Они автоматически отправляются браузерами — разработчики не могут устанавливать их вручную.
+**Important Note**: Это Fetch Metadata Request Headers, предложенные Google. Они автоматически
+отправляются браузерами — разработчики не могут устанавливать их вручную.
 
 **Источники**:
 
@@ -566,7 +596,8 @@ app.use('/admin/*', fetchMetadataPolicy);
 
 **Статус**: **Baseline Newly Available** (ноябрь 2024) — Firefox 133 ⭐
 
-**Назначение**: Свойство `keepalive` интерфейса Request указывает, будет ли браузер поддерживать associated request alive, если страница, инициировавшая его, выгружается до завершения request.
+**Назначение**: Свойство `keepalive` интерфейса Request указывает, будет ли браузер поддерживать
+associated request alive, если страница, инициировавшая его, выгружается до завершения request.
 
 **Browser Support**:
 
@@ -661,14 +692,14 @@ onLCP(reportWebVitals);
 
 **Сравнение keepalive vs sendBeacon**:
 
-| Feature | fetch + keepalive | sendBeacon |
-| --- | --- | --- |
-| HTTP methods | GET, POST, PUT, DELETE, etc. | Только POST |
-| Custom headers | ✅ Да | ❌ Ограничено |
-| Response access | ✅ Да (Promise) | ❌ Нет |
-| Browser support | Широкая (2024) | Универсальная |
-| Size limit | ~64KB | ~64KB |
-| Guaranteed delivery | ✅ Да | ✅ Да |
+| Feature             | fetch + keepalive            | sendBeacon    |
+| ------------------- | ---------------------------- | ------------- |
+| HTTP methods        | GET, POST, PUT, DELETE, etc. | Только POST   |
+| Custom headers      | ✅ Да                        | ❌ Ограничено |
+| Response access     | ✅ Да (Promise)              | ❌ Нет        |
+| Browser support     | Широкая (2024)               | Универсальная |
+| Size limit          | ~64KB                        | ~64KB         |
+| Guaranteed delivery | ✅ Да                        | ✅ Да         |
 
 **Firefox 133 Implementation** (ноябрь 2024):
 
@@ -686,7 +717,8 @@ onLCP(reportWebVitals);
 
 **Статус**: **Baseline Newly Available** (ноябрь 2024) — Chrome 132 ⭐
 
-**Назначение**: Новый метод `bytes()`, добавленный к Request и Response интерфейсам, возвращает promise, resolving с Uint8Array, улучшая ergonomics получения binary body data.
+**Назначение**: Новый метод `bytes()`, добавленный к Request и Response интерфейсам, возвращает
+promise, resolving с Uint8Array, улучшая ergonomics получения binary body data.
 
 **Browser Support**:
 
@@ -695,7 +727,9 @@ onLCP(reportWebVitals);
 - **Safari**: доступно в Safari 18.0+
 - **Edge**: Chromium версия 132+
 
-**Why It Was Added**: Хотя Request и Response имеют метод `arrayBuffer()`, вы не можете читать напрямую из buffer — необходимо создать view, такой как Uint8Array. Метод `bytes()` устраняет этот extra step.
+**Why It Was Added**: Хотя Request и Response имеют метод `arrayBuffer()`, вы не можете читать
+напрямую из buffer — необходимо создать view, такой как Uint8Array. Метод `bytes()` устраняет этот
+extra step.
 
 **Syntax**:
 
@@ -784,7 +818,8 @@ async function loadWasmModule(url) {
 - Cryptographic operations
 - WebAssembly module loading
 
-**Specification**: Следует принципу, что APIs должны generally предоставлять byte buffers как Uint8Arrays.
+**Specification**: Следует принципу, что APIs должны generally предоставлять byte buffers как
+Uint8Arrays.
 
 **Источники**:
 
@@ -797,7 +832,9 @@ async function loadWasmModule(url) {
 
 **Статус**: Chrome Origin Trial (январь - сентябрь 2024)
 
-**Назначение**: Proposal для замены сложности поддержания requests alive во время page unload single API call. Просит браузер гарантировать, что request будет сделан в какой-то момент в будущем, даже если страница закрыта.
+**Назначение**: Proposal для замены сложности поддержания requests alive во время page unload single
+API call. Просит браузер гарантировать, что request будет сделан в какой-то момент в будущем, даже
+если страница закрыта.
 
 **Browser Support**:
 
@@ -818,7 +855,8 @@ fetchLater(url, {
 
 **Key Features**:
 
-- `activateAfter` опция: Fire request после timeout или когда page unloads, whichever приходит первым
+- `activateAfter` опция: Fire request после timeout или когда page unloads, whichever приходит
+  первым
 - Нет необходимости использовать `keepalive` flag explicitly
 - Браузер гарантирует delivery даже если page закрыта
 
@@ -890,7 +928,8 @@ function trackABTestCompletion(variantId) {
 
 **Статус**: Shipped в Chrome 123 (март 2024), после origin trial с Chrome 116 ⭐
 
-**Назначение**: Declarative API для спецификации того, как определённые resource paths должны быть fetched, bypassing service worker execution для specific routes для улучшения performance.
+**Назначение**: Declarative API для спецификации того, как определённые resource paths должны быть
+fetched, bypassing service worker execution для specific routes для улучшения performance.
 
 **Browser Support**:
 
@@ -1033,7 +1072,8 @@ addEventListener('install', (event) => {
 
 **Статус**: Доступен в Chrome и Firefox (limited Safari support)
 
-**Назначение**: Low-latency, bidirectional communication через HTTP/3, intended как modern alternative к WebSockets для real-time приложений.
+**Назначение**: Low-latency, bidirectional communication через HTTP/3, intended как modern
+alternative к WebSockets для real-time приложений.
 
 **Browser Support** (2024):
 
@@ -1041,8 +1081,8 @@ addEventListener('install', (event) => {
 - **Edge**: Chromium-based support
 - **Firefox**: версия 115+ (полная поддержка)
 - **Safari**: **не поддерживается** ни в одной версии
-  - Может быть включён в developer menu для experimental features
-  - Work in progress
+    - Может быть включён в developer menu для experimental features
+    - Work in progress
 - **Opera**: поддерживается в recent versions
 
 **Overall Compatibility Score**: 63 (отражает отсутствие поддержки Safari)
@@ -1198,7 +1238,8 @@ setInterval(() => {
 
 **Статус**: Shipped в Chrome 124 (16 апреля 2024) ⭐
 
-**Назначение**: Интеграция WHATWG Streams с WebSocket API, resolving недостатки путём добавления backpressure support через streams integration.
+**Назначение**: Интеграция WHATWG Streams с WebSocket API, resolving недостатки путём добавления
+backpressure support через streams integration.
 
 **Browser Support**:
 
@@ -1207,9 +1248,11 @@ setInterval(() => {
 - **Firefox**: не поддерживается
 - **Safari**: не поддерживается
 
-**Problem Solved**: Traditional WebSocket API lacks ergonomic backpressure handling, означая, что приложения не могут легко handle ситуации, когда incoming data превышает processing capacity.
+**Problem Solved**: Traditional WebSocket API lacks ergonomic backpressure handling, означая, что
+приложения не могут легко handle ситуации, когда incoming data превышает processing capacity.
 
-**Key Advantage**: Backpressure можно применить "for free" без extra cost, enabling приложениям naturally throttle data flow.
+**Key Advantage**: Backpressure можно применить "for free" без extra cost, enabling приложениям
+naturally throttle data flow.
 
 **API Example**:
 
@@ -1357,7 +1400,8 @@ await wss.closed; // Wait для closure confirmation
 
 **Статус**: Chrome 125 Beta (май 2024)
 
-**Что изменилось**: WebSocket constructor теперь принимает HTTP(S) URLs в дополнение к WS/WSS URLs, enabling использование relative URLs.
+**Что изменилось**: WebSocket constructor теперь принимает HTTP(S) URLs в дополнение к WS/WSS URLs,
+enabling использование relative URLs.
 
 **Implementation**: HTTP(s) schemes нормализуются к `ws:` и `wss:` internal schemes.
 
@@ -1373,7 +1417,8 @@ const ws2 = new WebSocket('/socket'); // Relative URL
 // ws(s)://current-origin/socket
 ```
 
-**Impact**: Упрощает WebSocket URL construction, позволяет relative URLs, better developer experience.
+**Impact**: Упрощает WebSocket URL construction, позволяет relative URLs, better developer
+experience.
 
 **Источник**:
 
@@ -1385,7 +1430,8 @@ const ws2 = new WebSocket('/socket'); // Relative URL
 
 **Статус**: Chrome/Edge only (не ещё Baseline)
 
-**Назначение**: Declarative API для спецификации prefetch и prerender rules, позволяя браузерам speculate, какие страницы пользователи могут navigate к next.
+**Назначение**: Declarative API для спецификации prefetch и prerender rules, позволяя браузерам
+speculate, какие страницы пользователи могут navigate к next.
 
 **Browser Support** (2024):
 
@@ -1399,7 +1445,8 @@ const ws2 = new WebSocket('/socket'); // Relative URL
 
 **Chrome 121 (январь 2024)**:
 
-- Добавлена поддержка **document rules** — расширение, позволяющее браузеру получать URLs для speculative loading из page elements ⭐
+- Добавлена поддержка **document rules** — расширение, позволяющее браузеру получать URLs для
+  speculative loading из page elements ⭐
 - Может быть указано используя `Speculation-Rules` HTTP header
 - **Automatic link finding**: Браузер может автоматически discover links для prerender
 - **Eagerness field**: Контроль когда speculation происходит
@@ -1407,9 +1454,9 @@ const ws2 = new WebSocket('/socket'); // Relative URL
 **Chrome 122 (февраль 2024)**:
 
 - Добавлена **eagerness опция** с уровнями:
-  - `eager`: Speculate сразу
-  - `moderate`: Speculate на hover (200ms)
-  - `conservative`: Speculate на mouse/touch down
+    - `eager`: Speculate сразу
+    - `moderate`: Speculate на hover (200ms)
+    - `conservative`: Speculate на mouse/touch down
 
 **Desktop Rollout (сентябрь 2024)**:
 
@@ -1477,13 +1524,13 @@ Speculation-Rules: "/speculation-rules.json"
 
 **Prerender vs Prefetch**:
 
-| Feature | Prerender | Prefetch |
-| --- | --- | --- |
-| Downloads resources | ✅ Да | ✅ Да |
-| Renders page | ✅ Да | ❌ Нет |
-| JavaScript execution | ✅ Да | ❌ Нет |
-| Navigation speed | Instant | Fast |
-| Resource usage | High | Low |
+| Feature              | Prerender | Prefetch |
+| -------------------- | --------- | -------- |
+| Downloads resources  | ✅ Да     | ✅ Да    |
+| Renders page         | ✅ Да     | ❌ Нет   |
+| JavaScript execution | ✅ Да     | ❌ Нет   |
+| Navigation speed     | Instant   | Fast     |
+| Resource usage       | High      | Low      |
 
 **Практический пример — E-commerce Site**:
 
@@ -1558,7 +1605,8 @@ Speculation-Rules: "/speculation-rules.json"
 
 **Статус**: Добавлен в Firefox 122 (январь 2024) ⭐
 
-**Назначение**: Performance timing tool предоставляющий timing информацию о largest image или text paint до того, как users взаимодействуют с web page.
+**Назначение**: Performance timing tool предоставляющий timing информацию о largest image или text
+paint до того, как users взаимодействуют с web page.
 
 **Browser Support**:
 
@@ -1652,7 +1700,8 @@ onLCP((metric) => {
 - Similar HTTPS upgrade с HTTP fallback механизмом
 - Может быть enabled для normal browsing
 
-**General Status**: Major browsers теперь offer native support для HTTPS-only mode, устраняя необходимость расширений как HTTPS Everywhere.
+**General Status**: Major browsers теперь offer native support для HTTPS-only mode, устраняя
+необходимость расширений как HTTPS Everywhere.
 
 **Практические implications**:
 
@@ -1676,9 +1725,11 @@ if (location.protocol !== 'https:') {
 
 **Статус**: Shipped в Safari 18.0 (16 сентября 2024) ⭐
 
-**Что изменилось**: Safari 18.0 теперь automatically upgrades passive subresource requests к HTTPS. Все images и media теперь auto-upgraded к HTTPS, в adherence с Mixed Content Level 2.
+**Что изменилось**: Safari 18.0 теперь automatically upgrades passive subresource requests к HTTPS.
+Все images и media теперь auto-upgraded к HTTPS, в adherence с Mixed Content Level 2.
 
-**Impact**: Images, video, и audio files served через HTTP на HTTPS pages transparently upgraded к secure connections, improving security без breaking existing sites.
+**Impact**: Images, video, и audio files served через HTTP на HTTPS pages transparently upgraded к
+secure connections, improving security без breaking existing sites.
 
 **Related Fixes в Safari 18.0**:
 
@@ -1698,24 +1749,32 @@ if (location.protocol !== 'https:') {
 
 #### 1.1 Timeline событий
 
-**4 января 2024**: Chrome ограничил third-party cookies для 1% пользователей как часть Privacy Sandbox testing.
+**4 января 2024**: Chrome ограничил third-party cookies для 1% пользователей как часть Privacy
+Sandbox testing.
 
-**Original Plan**: Chrome планировал ramp up third-party cookie restrictions к 100% пользователей с Q3 2024, subject к addressing competition concerns от UK's Competition and Markets Authority (CMA).
+**Original Plan**: Chrome планировал ramp up third-party cookie restrictions к 100% пользователей с
+Q3 2024, subject к addressing competition concerns от UK's Competition and Markets Authority (CMA).
 
-**22 июля 2024**: **Google официально объявил, что НЕ будет phase out third-party cookies на Chrome как originally planned.** Это представляет major policy reversal. ⭐⭐⭐
+**22 июля 2024**: **Google официально объявил, что НЕ будет phase out third-party cookies на Chrome
+как originally planned.** Это представляет major policy reversal. ⭐⭐⭐
 
-**Новый подход**: Вместо deprecating third-party cookies, Google ввёл new experience в Chrome, позволяющее людям сделать informed choice, применяемый across их web browsing.
+**Новый подход**: Вместо deprecating third-party cookies, Google ввёл new experience в Chrome,
+позволяющее людям сделать informed choice, применяемый across их web browsing.
 
 #### 1.2 Причины разворота
 
-- **CMA Review**: UK's Competition and Markets Authority needed sufficient time для review evidence, включая industry test results к концу июня
+- **CMA Review**: UK's Competition and Markets Authority needed sufficient time для review evidence,
+  включая industry test results к концу июня
 - **Advertising Industry Pushback**: Significant pushback от advertising industry
-- **Economic Disruption Concerns**: Publishers могли потерять average 60% их revenue от Google Chrome
+- **Economic Disruption Concerns**: Publishers могли потерять average 60% их revenue от Google
+  Chrome
 - **Industry Readiness Issues**: Индустрия не была готова к transition
 
 #### 1.3 Current Status (2025)
 
-Third-party cookies остаются **enabled by default** в Chrome. Privacy Sandbox initiative остаётся в place, но shifted от being cookie replacement к being privacy enhancement option, coexisting с traditional cookies.
+Third-party cookies остаются **enabled by default** в Chrome. Privacy Sandbox initiative остаётся в
+place, но shifted от being cookie replacement к being privacy enhancement option, coexisting с
+traditional cookies.
 
 **Implications для индустрии**:
 
@@ -1737,7 +1796,9 @@ Third-party cookies остаются **enabled by default** в Chrome. Privacy S
 
 **Статус**: **Enabled by default** на всех desktop platforms ⭐
 
-**Назначение**: Защита network traffic от Chrome с серверами, также supporting ML-KEM от decryption future quantum computers. Defends против "store now decrypt later" attacks, где future quantum computers могли decrypt encrypted traffic recorded today.
+**Назначение**: Защита network traffic от Chrome с серверами, также supporting ML-KEM от decryption
+future quantum computers. Defends против "store now decrypt later" attacks, где future quantum
+computers могли decrypt encrypted traffic recorded today.
 
 **Technical Details**:
 
@@ -1757,7 +1818,8 @@ Third-party cookies остаются **enabled by default** в Chrome. Privacy S
 
 **Статус**: **Upgraded к final ML-KEM standard** ⭐⭐
 
-**Что изменилось**: Switched от X25519Kyber768 к final standard version ML-KEM, NIST-standardized версии post-quantum cryptography.
+**Что изменилось**: Switched от X25519Kyber768 к final standard version ML-KEM, NIST-standardized
+версии post-quantum cryptography.
 
 **Timeline**:
 
@@ -1965,8 +2027,10 @@ async function authenticateWithPasskey() {
 **Key Features Added**:
 
 - **Auto-reauthentication**: Users могут reauthenticate automatically на return
-- **Cross-origin iframe support**: Теперь available (embedder должен specify `Permissions-Policy: identity-credentials-get`)
-- **Login Status API**: Mechanism для websites (especially IdPs) inform browser user's login status (required для FedCM)
+- **Cross-origin iframe support**: Теперь available (embedder должен specify
+  `Permissions-Policy: identity-credentials-get`)
+- **Login Status API**: Mechanism для websites (especially IdPs) inform browser user's login status
+  (required для FedCM)
 
 **Browser Support**:
 
@@ -2116,7 +2180,9 @@ app.post('/api/chat/init', (req, res) => {
 
 **Security Implications**:
 
-CHIPS — часть Privacy Sandbox initiative, направленной на отказ от third-party cookies при сохранении необходимой functionality. Partitioned cookies предотвращают cross-site tracking, так как каждый top-level site имеет свой isolated набор cookies для embedded content.
+CHIPS — часть Privacy Sandbox initiative, направленной на отказ от third-party cookies при
+сохранении необходимой functionality. Partitioned cookies предотвращают cross-site tracking, так как
+каждый top-level site имеет свой isolated набор cookies для embedded content.
 
 **Diagram**:
 
@@ -2148,7 +2214,8 @@ Cookies изолированы между partitions — tracking невозмо
 
 #### 4.2 Storage Access API
 
-**Назначение**: Позволяет embedded content запросить доступ к third-party cookies privacy-preserving способом.
+**Назначение**: Позволяет embedded content запросить доступ к third-party cookies privacy-preserving
+способом.
 
 **Browser Support и Различия (2024)**:
 
@@ -2223,7 +2290,8 @@ document.getElementById('login-button').addEventListener('click', async () => {
 
 #### 5.1 Bounce Tracking Protection
 
-**Назначение**: Предотвратить tracking через redirect bounces, briefly navigating через tracking domain.
+**Назначение**: Предотвратить tracking через redirect bounces, briefly navigating через tracking
+domain.
 
 **Browser Implementations (2024)**:
 
@@ -2238,7 +2306,8 @@ document.getElementById('login-button').addEventListener('click', async () => {
 
 - **Launched by default октябрь 2023** для users с third-party cookies blocked
 - Monitors navigations и flags sites часть "stateful bounce"
-- **45-day interaction window**: Если нет user interaction и third-party cookies blocked, state deleted
+- **45-day interaction window**: Если нет user interaction и third-party cookies blocked, state
+  deleted
 - Periodically examines flagged sites
 
 **Firefox**:
@@ -2251,11 +2320,11 @@ document.getElementById('login-button').addEventListener('click', async () => {
 
 **Key Differences**:
 
-| Browser | Interaction Window | Detection Method | Availability |
-| --- | --- | --- | --- |
-| Safari | 1-7 days | Proprietary ITP | Все users |
-| Chrome | 45 days | Web standard | Cookie blockers |
-| Firefox | 45 days | Web standard | Strict mode |
+| Browser | Interaction Window | Detection Method | Availability    |
+| ------- | ------------------ | ---------------- | --------------- |
+| Safari  | 1-7 days           | Proprietary ITP  | Все users       |
+| Chrome  | 45 days            | Web standard     | Cookie blockers |
+| Firefox | 45 days            | Web standard     | Strict mode     |
 
 **Как работает Bounce Tracking**:
 
@@ -2309,9 +2378,12 @@ Bounce Tracking Protection:
 
 #### 6.1 Privacy Sandbox Status в 2024
 
-**Major Update**: Несмотря на cookie deprecation reversal, Privacy Sandbox APIs продолжили mature и generally available.
+**Major Update**: Несмотря на cookie deprecation reversal, Privacy Sandbox APIs продолжили mature и
+generally available.
 
-**Official Statement**: "The change в Privacy Sandbox direction does not impact Google Identity Service's investment в FedCM, seeing it как valuable для improving privacy, security и user experience federated sign-in experiences independently от any changes к third-party cookies."
+**Official Statement**: "The change в Privacy Sandbox direction does not impact Google Identity
+Service's investment в FedCM, seeing it как valuable для improving privacy, security и user
+experience federated sign-in experiences independently от any changes к third-party cookies."
 
 #### 6.2 Topics API
 
@@ -2390,7 +2462,8 @@ async function showRelevantAds() {
 
 **2024 Enhancements**:
 
-- Updates к interest group fields accommodate deal information (deal ID и seat ID) для private marketplaces
+- Updates к interest group fields accommodate deal information (deal ID и seat ID) для private
+  marketplaces
 - Transition away от event-level reporting announced (no sooner than 2026)
 - Requirement использовать Fenced Frames (effective no sooner than 2026)
 
@@ -2456,16 +2529,19 @@ async function showRelevantAds() {
 
 **Firefox 125 (апрель 2024)**:
 
-- **CVE-2024-3302**: Denial-of-service using HTTP/2 CONTINUATION frames (HTTP/2 Continuation Flood attack) ⭐
+- **CVE-2024-3302**: Denial-of-service using HTTP/2 CONTINUATION frames (HTTP/2 Continuation Flood
+  attack) ⭐
 
 **Firefox 127 (июнь 2024)**:
 
-- **Mixed Content Upgrade**: Starting Firefox 127, automatically upgrades audio, video, и image subresources от HTTP к HTTPS ⭐
+- **Mixed Content Upgrade**: Starting Firefox 127, automatically upgrades audio, video, и image
+  subresources от HTTP к HTTPS ⭐
 - 93% Firefox requests already HTTPS
 
 **Firefox 128 (июль 2024)**:
 
-- **DTLS 1.3 Support**: Firefox became first browser support DTLS 1.3, providing robust end-to-end encryption для real-time audio и video data ⭐
+- **DTLS 1.3 Support**: Firefox became first browser support DTLS 1.3, providing robust end-to-end
+  encryption для real-time audio и video data ⭐
 
 **Firefox 133 (ноябрь 2024)**:
 
@@ -2489,7 +2565,8 @@ async function showRelevantAds() {
 **Safari 17.3 (январь 2024)**:
 
 - 3 WebKit vulnerabilities patched
-- **CVE-2024-23213**: Processing malicious web content could lead к arbitrary code execution (may have been exploited) ⭐
+- **CVE-2024-23213**: Processing malicious web content could lead к arbitrary code execution (may
+  have been exploited) ⭐
 - **CVE-2024-23211**: Malicious webpage could fingerprint users
 
 **Safari 17.4 (март 2024)**:
@@ -2532,7 +2609,8 @@ async function showRelevantAds() {
 
 **Chrome**: Removed HTTP/2 Push в Chrome 106 (2022)
 
-**Reason**: Compatibility issues с various sites, limited adoption, нет support в других major browsers
+**Reason**: Compatibility issues с various sites, limited adoption, нет support в других major
+browsers
 
 **Alternative Technologies**:
 
@@ -2552,7 +2630,8 @@ async function showRelevantAds() {
 
 **Что изменилось**: Chrome://flag для disable third-party storage partitioning removed.
 
-**Impact**: **Breaking change** — enforces privacy через storage partitioning. Не может быть disabled пользователями.
+**Impact**: **Breaking change** — enforces privacy через storage partitioning. Не может быть
+disabled пользователями.
 
 **Источник**:
 
@@ -2562,42 +2641,42 @@ async function showRelevantAds() {
 
 ### HTTP/3 Support
 
-| Browser | Версия | Статус | Дата |
-| --- | --- | --- | --- |
-| Chrome | 87+ | ✅ Полная поддержка | Ноябрь 2020 |
-| Edge | 87+ | ✅ Полная поддержка | Ноябрь 2020 |
-| Firefox | 88+ | ✅ Полная поддержка | Апрель 2021 |
-| Safari | 16.0+ | ✅ Production | 2023-2024 |
-| Opera | 73+ | ✅ Полная поддержка | Ноябрь 2020 |
+| Browser | Версия | Статус              | Дата        |
+| ------- | ------ | ------------------- | ----------- |
+| Chrome  | 87+    | ✅ Полная поддержка | Ноябрь 2020 |
+| Edge    | 87+    | ✅ Полная поддержка | Ноябрь 2020 |
+| Firefox | 88+    | ✅ Полная поддержка | Апрель 2021 |
+| Safari  | 16.0+  | ✅ Production       | 2023-2024   |
+| Opera   | 73+    | ✅ Полная поддержка | Ноябрь 2020 |
 
 ### Baseline-достижения 2024
 
-| Feature | Baseline Date | Triggered By | Widely Available |
-| --- | --- | --- | --- |
-| Priority Header | 29 октября 2024 | Firefox 132 | Апрель 2027 |
-| Fetch Priority | 29 октября 2024 | Firefox 132 | Апрель 2027 |
-| bytes() Method | Ноябрь 2024 | Chrome 132 | Апрель 2027 |
-| keepalive | Ноябрь 2024 | Firefox 133 | Апрель 2027 |
+| Feature         | Baseline Date   | Triggered By | Widely Available |
+| --------------- | --------------- | ------------ | ---------------- |
+| Priority Header | 29 октября 2024 | Firefox 132  | Апрель 2027      |
+| Fetch Priority  | 29 октября 2024 | Firefox 132  | Апрель 2027      |
+| bytes() Method  | Ноябрь 2024     | Chrome 132   | Апрель 2027      |
+| keepalive       | Ноябрь 2024     | Firefox 133  | Апрель 2027      |
 
 ### Постквантовая Криптография
 
-| Browser | Версия | Algorithm | Дата |
-| --- | --- | --- | --- |
-| Chrome | 124 | X25519Kyber768 | Апрель 2024 |
-| Chrome | 131 | ML-KEM (final) | Ноябрь 2024 |
-| Edge | 124+ | X25519Kyber768 | Апрель 2024 |
-| Firefox | ❌ | Не поддерживается | — |
-| Safari | ❌ | Не поддерживается | — |
+| Browser | Версия | Algorithm         | Дата        |
+| ------- | ------ | ----------------- | ----------- |
+| Chrome  | 124    | X25519Kyber768    | Апрель 2024 |
+| Chrome  | 131    | ML-KEM (final)    | Ноябрь 2024 |
+| Edge    | 124+   | X25519Kyber768    | Апрель 2024 |
+| Firefox | ❌     | Не поддерживается | —           |
+| Safari  | ❌     | Не поддерживается | —           |
 
 ### Passkeys Support
 
-| Platform | Browser/OS | Support Level | Дата |
-| --- | --- | --- | --- |
-| Windows | Chrome | ✅ Полная | — |
-| Windows 11 | Windows Hello | ✅ + Third-party | Ноябрь 2024 |
-| macOS | Safari/Chrome | ✅ iCloud Keychain | — |
-| iOS/iPadOS | Safari | ✅ Полная | — |
-| Android | Chrome | ✅ Полная | — |
+| Platform   | Browser/OS    | Support Level      | Дата        |
+| ---------- | ------------- | ------------------ | ----------- |
+| Windows    | Chrome        | ✅ Полная          | —           |
+| Windows 11 | Windows Hello | ✅ + Third-party   | Ноябрь 2024 |
+| macOS      | Safari/Chrome | ✅ iCloud Keychain | —           |
+| iOS/iPadOS | Safari        | ✅ Полная          | —           |
+| Android    | Chrome        | ✅ Полная          | —           |
 
 ## Практические рекомендации
 
@@ -2713,9 +2792,13 @@ Permissions-Policy: geolocation=(self), microphone=(), camera=()
 
 ## Заключение
 
-2024 год стал переломным для веб-индустрии. Отмена планов по deprecation third-party cookies изменила trajectory, но не остановила движение к более приватному вебу. Privacy Sandbox APIs продолжили развитие, passkeys стали mainstream, и постквантовая криптография integrated в production browsers.
+2024 год стал переломным для веб-индустрии. Отмена планов по deprecation third-party cookies
+изменила trajectory, но не остановила движение к более приватному вебу. Privacy Sandbox APIs
+продолжили развитие, passkeys стали mainstream, и постквантовая криптография integrated в production
+browsers.
 
-HTTP/3 достиг ~30% adoption, Baseline-статуса добились критически важные APIs (Priority, Fetch Priority, keepalive, bytes()), а bounce tracking protection теперь доступна во всех major browsers.
+HTTP/3 достиг ~30% adoption, Baseline-статуса добились критически важные APIs (Priority, Fetch
+Priority, keepalive, bytes()), а bounce tracking protection теперь доступна во всех major browsers.
 
 ### Ключевые выводы
 

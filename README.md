@@ -9,7 +9,8 @@
 - Frontend Baseline 2018–2022
     - [Онлайн](https://zoobestik.github.io/wiki-webtech-dev/frontend-baseline-2018-2022/)
     - [GitHub (Markdown)](https://github.com/zoobestik/wiki-webtech-dev/tree/main/research/frontend-baseline-2018-2022/index.md)
-- Список исследований ([GitHub](https://github.com/zoobestik/wiki-webtech-dev/blob/main/research/index.md))
+- Список исследований
+  ([GitHub](https://github.com/zoobestik/wiki-webtech-dev/blob/main/research/index.md))
 
 ## Немного технички: как собирать
 
@@ -28,4 +29,5 @@
     bun docs:preview
     ```
 
-CI/CD: деплой на GitHub Pages настроен через GitHub Actions (`.github/workflows/deploy.yml`). Базовый путь сайта: `/wiki-webtech-dev/`.
+CI/CD: деплой на GitHub Pages настроен через GitHub Actions (`.github/workflows/deploy.yml`).
+Базовый путь сайта: `/wiki-webtech-dev/`.

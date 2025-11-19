@@ -1,6 +1,8 @@
 ---
 title: HTML — изменения 2023 года
-description: Комплексный обзор изменений в HTML за 2023 год - новые элементы, атрибуты, Baseline статусы и практические рекомендации
+description:
+    Комплексный обзор изменений в HTML за 2023 год - новые элементы, атрибуты, Baseline статусы и
+    практические рекомендации
 outline: deep
 lastUpdated: true
 ---
@@ -12,7 +14,8 @@ lastUpdated: true
 
 ## Обзор года
 
-2023 год стал периодом консолидации и достижения межбраузерной совместимости для множества HTML-технологий. Ключевые темы года:
+2023 год стал периодом консолидации и достижения межбраузерной совместимости для множества
+HTML-технологий. Ключевые темы года:
 
 - **Семантический HTML**: появление элемента `<search>`
 - **Декларативный UI**: Popover API и атрибут `name` для `<details>`
@@ -34,11 +37,14 @@ lastUpdated: true
 - Firefox 118 — 26 сентября 2023
 - Chrome 118 — октябрь 2023
 
-**Спецификация**: [WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element) (добавлен 24 марта 2023, [PR #7320](https://github.com/whatwg/html/pull/7320))
+**Спецификация**:
+[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/grouping-content.html#the-search-element)
+(добавлен 24 марта 2023, [PR #7320](https://github.com/whatwg/html/pull/7320))
 
 **Практическое применение**:
 
-Элемент `<search>` автоматически создаёт `search` landmark для вспомогательных технологий, устраняя необходимость использования `role="search"` на `<div>` или `<form>`.
+Элемент `<search>` автоматически создаёт `search` landmark для вспомогательных технологий, устраняя
+необходимость использования `role="search"` на `<div>` или `<form>`.
 
 ```html
 <!-- Старый подход -->
@@ -61,7 +67,8 @@ lastUpdated: true
 **Рекомендации**:
 
 - Безопасно использовать в production с октября 2023
-- Для обратной совместимости с устаревшими браузерами можно временно сохранять `role="search"` (progressive enhancement)
+- Для обратной совместимости с устаревшими браузерами можно временно сохранять `role="search"`
+  (progressive enhancement)
 
 **Источники**:
 
@@ -75,7 +82,8 @@ lastUpdated: true
 
 **Статус**: НЕ достиг Baseline в 2023 (отсутствует поддержка Firefox)
 
-Группирует несколько элементов `<details>` в эксклюзивный аккордеон, где открытие одного элемента автоматически закрывает другие.
+Группирует несколько элементов `<details>` в эксклюзивный аккордеон, где открытие одного элемента
+автоматически закрывает другие.
 
 **Поддержка браузерами**:
 
@@ -83,7 +91,9 @@ lastUpdated: true
 - Chrome 120 — декабрь 2023
 - Firefox — не поддерживается (на конец 2023)
 
-**Спецификация**: [WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element) ([PR #9400](https://github.com/whatwg/html/pull/9400))
+**Спецификация**:
+[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/interactive-elements.html#the-details-element)
+([PR #9400](https://github.com/whatwg/html/pull/9400))
 
 **Практическое применение**:
 
@@ -130,7 +140,8 @@ lastUpdated: true
 
 **Практическое применение**:
 
-Откладывает загрузку iframe-элементов до момента приближения к видимой области. Критично для страниц с множественными встраиваниями (YouTube, карты, виджеты соцсетей).
+Откладывает загрузку iframe-элементов до момента приближения к видимой области. Критично для страниц
+с множественными встраиваниями (YouTube, карты, виджеты соцсетей).
 
 ```html
 <!-- Iframe загружается только при приближении к viewport -->
@@ -180,7 +191,8 @@ lastUpdated: true
 
 **Статус**: НЕ достиг Baseline в 2023 → Baseline Newly Available (январь 2025)
 
-Декларативный способ создания всплывающих элементов с встроенным управлением фокусом, закрытием по Escape и backdrop-слоем.
+Декларативный способ создания всплывающих элементов с встроенным управлением фокусом, закрытием по
+Escape и backdrop-слоем.
 
 **Поддержка браузерами**:
 
@@ -301,11 +313,13 @@ popover.addEventListener('beforetoggle', (event) => {
 - Safari 16.4 — 27 марта 2023 ⭐
 - Firefox — в разработке (на конец 2023)
 
-**Спецификация**: [WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
+**Спецификация**:
+[WHATWG HTML Living Standard](https://html.spec.whatwg.org/multipage/scripting.html#the-template-element)
 
 **Практическое применение**:
 
-Устраняет "вспышку нестилизованного контента" (FOUC) для веб-компонентов, позволяя серверу отправлять полностью сформированную разметку с инкапсулированными стилями.
+Устраняет "вспышку нестилизованного контента" (FOUC) для веб-компонентов, позволяя серверу
+отправлять полностью сформированную разметку с инкапсулированными стилями.
 
 ```html
 <custom-card>
@@ -531,7 +545,8 @@ dialog.close('returnValue'); // Опционально передать знач
 
 **Статус**: Baseline Newly Available (апрель 2023)
 
-Глобальный булевый атрибут, делающий элемент и все его потомки инертными (недоступными для взаимодействия).
+Глобальный булевый атрибут, делающий элемент и все его потомки инертными (недоступными для
+взаимодействия).
 
 **Поддержка браузерами**:
 
@@ -932,7 +947,8 @@ input:user-valid {
 
 **На конец 2023 года не зафиксировано критических HTML deprecations.**
 
-Большинство deprecations касаются JavaScript APIs и безопасности (см. отчёты по JavaScript и Security за 2023).
+Большинство deprecations касаются JavaScript APIs и безопасности (см. отчёты по JavaScript и
+Security за 2023).
 
 ## 10. Сводная таблица Baseline статусов
 
@@ -955,9 +971,12 @@ _\* Firefox 125 (апрель 2024)_
 ### 11.1 Основные тренды 2023 года
 
 1. **Семантический HTML**: Продолжение развития семантической разметки (`<search>`)
-2. **Декларативный подход**: Создание интерактивных интерфейсов без JavaScript (Popover, `<details name>`)
-3. **Accessibility First**: Фокус на встроенной доступности (Interop 2023 Accessibility Investigation)
-4. **Интероперабельность**: Множество возможностей достигли Baseline (`<dialog>`, `inert`, `loading="lazy"`)
+2. **Декларативный подход**: Создание интерактивных интерфейсов без JavaScript (Popover,
+   `<details name>`)
+3. **Accessibility First**: Фокус на встроенной доступности (Interop 2023 Accessibility
+   Investigation)
+4. **Интероперабельность**: Множество возможностей достигли Baseline (`<dialog>`, `inert`,
+   `loading="lazy"`)
 5. **Мобильный UX**: Улучшения для виртуальных клавиатур (`enterkeyhint`, `inputmode`)
 6. **Производительность**: Native lazy loading для iframe, `modulepreload`
 
@@ -1030,5 +1049,6 @@ _\* Firefox 125 (апрель 2024)_
 
 - **Дата создания отчёта**: 18.11.2025
 - **Research ID**: `frontend-baseline-2023-2025`
-- **Автор**: DeepResearch-Claude
-- **Связанные отчёты**: [CSS 2023](./css.md), [JavaScript 2023](./javascript.md), [HTTP/Security 2023](./http-security.md)
+- **Автор**: DeepResearch Agent
+- **Связанные отчёты**: [CSS 2023](./css.md), [JavaScript 2023](./javascript.md),
+  [HTTP/Security 2023](./http-security.md)

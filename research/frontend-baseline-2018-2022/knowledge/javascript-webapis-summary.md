@@ -9,7 +9,8 @@ lastUpdated: true
 
 ## Обзор
 
-Период 2018–2022 характеризуется ежегодными ECMAScript релизами (ES2018–ES2022) и значительным расширением Web APIs. Основные тренды:
+Период 2018–2022 характеризуется ежегодными ECMAScript релизами (ES2018–ES2022) и значительным
+расширением Web APIs. Основные тренды:
 
 - **ECMAScript:** стабильные ежегодные релизы с incremental улучшениями
 - **Async/Performance APIs:** Core Web Vitals measurement, Observers расширение
@@ -610,4 +611,4 @@ observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'layout-shi
 
 - **Research ID:** `frontend-baseline-2018-2022`
 - **Дата создания:** 17.11.2025
-- **Методология:** DeepResearch-Claude
+- **Методология:** DeepResearch Agent

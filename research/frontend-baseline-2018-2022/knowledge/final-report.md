@@ -1,6 +1,7 @@
 ---
 title: Final Report
-description: Comprehensive отчет об изменениях Frontend Development 2018-2022 с executive summary и roadmap
+description:
+    Comprehensive отчет об изменениях Frontend Development 2018-2022 с executive summary и roadmap
 outline: deep
 lastUpdated: true
 ---
@@ -14,11 +15,13 @@ lastUpdated: true
 
 ## Executive Summary
 
-Период 2018–2022 стал одним из самых трансформационных в истории frontend-разработки. Ключевые изменения:
+Период 2018–2022 стал одним из самых трансформационных в истории frontend-разработки. Ключевые
+изменения:
 
 ### Институциональные сдвиги
 
-- **Май 2019:** W3C передал управление HTML и DOM стандартами WHATWG — конец эры параллельных спецификаций
+- **Май 2019:** W3C передал управление HTML и DOM стандартами WHATWG — конец эры параллельных
+  спецификаций
 - **Январь 2020:** Microsoft Edge мигрировал на Chromium — консолидация ~70% рынка на одном движке
 - **Март 2021:** Chrome и Firefox перешли на 4-недельные релизные циклы (с 6-недельных)
 
@@ -35,11 +38,13 @@ lastUpdated: true
 - Layout революция: Flexbox `gap` (2021), `aspect-ratio` (2021)
 - Математика: `clamp()`, `min()`, `max()` (2020) — responsive без media queries
 - Селекторы: `:is()`, `:where()` (2021), `:has()` появился (2022, baseline 2023)
-- Accessibility: `prefers-color-scheme` (2020), `prefers-reduced-motion` (2020), `:focus-visible` (2022)
+- Accessibility: `prefers-color-scheme` (2020), `prefers-reduced-motion` (2020), `:focus-visible`
+  (2022)
 
 **JavaScript:**
 
-- ES2020 — самый значимый релиз: optional chaining (`?.`), nullish coalescing (`??`), `Promise.allSettled()`, BigInt
+- ES2020 — самый значимый релиз: optional chaining (`?.`), nullish coalescing (`??`),
+  `Promise.allSettled()`, BigInt
 - ES2022: top-level await, private class fields, `Array.at()`
 - Web APIs: Observers расширение (Resize, Intersection v2), Performance APIs (Core Web Vitals)
 
@@ -66,10 +71,12 @@ lastUpdated: true
 
 1. **[html-changes.md](./html-changes.md)** — детальный обзор HTML изменений с примерами
 2. **[css-changes.md](./css-changes.md)** — comprehensive CSS изменения
-3. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JavaScript и Web API изменения
+3. **[javascript-webapis-summary.md](./javascript-webapis-summary.md)** — ключевые JavaScript и Web
+   API изменения
 4. **[final-report.md](./final-report.md)** — этот документ (executive summary и roadmap)
 5. **[scope.md](./scope.md)** — границы исследования, критерии, методология
-6. **[browser-timeline.md](./browser-timeline.md)** — timeline релизов браузеров, baseline методология
+6. **[browser-timeline.md](./browser-timeline.md)** — timeline релизов браузеров, baseline
+   методология
 
 ## Timeline ключевых событий
 
@@ -126,7 +133,8 @@ lastUpdated: true
 
 **Язык:**
 
-- ES2020 — прорыв: optional chaining (`?.`), nullish coalescing (`??`), BigInt, `Promise.allSettled()`, dynamic `import()` ⭐
+- ES2020 — прорыв: optional chaining (`?.`), nullish coalescing (`??`), BigInt,
+  `Promise.allSettled()`, dynamic `import()` ⭐
 
 ### 2021 — year of baseline
 
@@ -145,7 +153,8 @@ lastUpdated: true
 
 **Язык:**
 
-- ES2021: logical assignment (`||=`, `&&=`, `??=`), numeric separators, `String.replaceAll()`, `Promise.any()`
+- ES2021: logical assignment (`||=`, `&&=`, `??=`), numeric separators, `String.replaceAll()`,
+  `Promise.any()`
 
 ### 2022 — финальные штрихи периода
 
@@ -201,7 +210,8 @@ lastUpdated: true
 | `:focus-visible` | 2020   | 2021    | **2022**           | 2022     |
 | `loading="lazy"` | 2019   | 2020    | **2022**           | 2022     |
 
-**Причина:** Safari релизы привязаны к macOS/iOS релизам (2 раза в год vs. 8-12 раз для Chrome/Firefox).
+**Причина:** Safari релизы привязаны к macOS/iOS релизам (2 раза в год vs. 8-12 раз для
+Chrome/Firefox).
 
 ### 3. Ускорение релизных циклов
 
@@ -231,7 +241,8 @@ gantt
 
 ### 4. Layout достиг зрелости
 
-**CSS Grid (baseline 2017)** + **Flexbox gap (2021)** + **aspect-ratio (2021)** = полный набор инструментов для современного layout без хаков.
+**CSS Grid (baseline 2017)** + **Flexbox gap (2021)** + **aspect-ratio (2021)** = полный набор
+инструментов для современного layout без хаков.
 
 **До:**
 
@@ -561,7 +572,8 @@ button:focus-visible {
     - `clamp()`, `min()`, `max()`
     - Практика: responsive typography без media queries
 
-4. **JavaScript ES2020** → [javascript-webapis-summary.md](./javascript-webapis-summary.md), секция ES2020
+4. **JavaScript ES2020** → [javascript-webapis-summary.md](./javascript-webapis-summary.md), секция
+   ES2020
     - Optional chaining (`?.`)
     - Nullish coalescing (`??`)
     - Рефакторинг существующего кода с этими фичами
@@ -695,8 +707,10 @@ button:focus-visible {
 Период 2018–2022 завершил трансформацию, начатую в 2010-х:
 
 1. **HTML** достиг функциональной полноты — всё для современного веба без библиотек
-2. **CSS** получил все инструменты для любого layout — Grid, Flexbox, математика, Container Queries (конец периода)
-3. **JavaScript** стал зрелым языком — optional chaining, BigInt, top-level await решают реальные проблемы
+2. **CSS** получил все инструменты для любого layout — Grid, Flexbox, математика, Container Queries
+   (конец периода)
+3. **JavaScript** стал зрелым языком — optional chaining, BigInt, top-level await решают реальные
+   проблемы
 
 **Ключевое изменение mindset:**
 
@@ -723,6 +737,5 @@ button:focus-visible {
 - CSS Nesting native support
 - И многое другое...
 
-**Последнее обновление:** 17.11.2025
-**Исследователь:** DeepResearch-Claude
-**Методология:** Living Standard tracking, browser release notes analysis, MDN/Can I Use cross-reference
+**Последнее обновление:** 17.11.2025 **Исследователь:** DeepResearch Agent **Методология:** Living
+Standard tracking, browser release notes analysis, MDN/Can I Use cross-reference

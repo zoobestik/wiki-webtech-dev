@@ -317,7 +317,7 @@ Security:   10+ major initiatives
 ## Метаданные исследования
 
 **Research ID**: `frontend-baseline-2023-2025`  
-**Методология**: DeepResearch-Claude  
+**Методология**: DeepResearch Agent  
 **Автор**: Claude (Anthropic)  
 **Дата создания**: 18 ноября 2025  
 **Версия**: 1.0

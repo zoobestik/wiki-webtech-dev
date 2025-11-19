@@ -72,9 +72,9 @@
     - Safari: версии 16.3-18.2 (2023-2025).
     - Edge: синхронизировать с Chrome releases.
     - Сохранить ссылки и ключевые изменения в
-      `./research/frontend-baseline-2023-2025/tmp/browser-releases.md`.
+      `./research/frontend-baseline-2023-2025/browser-releases.md`.
     - Completed: список всех источников сохранен в
-      `./research/frontend-baseline-2023-2025/tmp/data-sources.md`.
+      `./research/frontend-baseline-2023-2025/data-sources.md`.
 
 - [ ] Собрать информацию о спецификациях W3C/WHATWG
     - Проверить статусы спецификаций (Working Draft → Candidate Recommendation → Recommendation).

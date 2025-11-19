@@ -1,6 +1,7 @@
 ---
 title: Timeline релизов браузеров
-description: Хронология релизов Chrome, Firefox, Safari и Edge в период 2018-2022 с baseline методологией
+description:
+    Хронология релизов Chrome, Firefox, Safari и Edge в период 2018-2022 с baseline методологией
 outline: deep
 lastUpdated: true
 ---
@@ -222,7 +223,8 @@ lastUpdated: true
 | Safari 15.4 | 14 марта 2022    | macOS 12.3, iOS 15.4  | `:has()`, `:focus-visible`, `<dialog>`, Cascade Layers, `accent-color` |
 | Safari 16.0 | 12 сентября 2022 | macOS Ventura, iOS 16 | Container Queries, Subgrid, `:has()` improvements, Passkeys            |
 
-**Важная деталь:** С Safari 11.1 WebKit версия в User-Agent была "заморожена" как `605.1.15` из соображений приватности.
+**Важная деталь:** С Safari 11.1 WebKit версия в User-Agent была "заморожена" как `605.1.15` из
+соображений приватности.
 
 ## Microsoft Edge
 
@@ -401,5 +403,6 @@ gantt
 - Chrome Releases Blog: https://chromereleases.googleblog.com
 - Firefox Release Notes: https://www.mozilla.org/firefox/releases/
 - Safari Release Notes: https://developer.apple.com/documentation/safari-release-notes
-- Wikipedia: Google Chrome version history, Firefox version history, Safari version history, Microsoft Edge
+- Wikipedia: Google Chrome version history, Firefox version history, Safari version history,
+  Microsoft Edge
 - Chromium Blog: Speeding up Chrome's release cycle (March 2021)

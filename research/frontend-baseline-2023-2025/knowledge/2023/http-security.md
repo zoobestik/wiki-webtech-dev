@@ -1,6 +1,8 @@
 ---
 title: 'HTTP, Protocols & Security — изменения 2023 года'
-description: 'Комплексный обзор изменений в HTTP, сетевых протоколах и веб-безопасности за 2023 год - HTTP/3, Privacy Sandbox, CHIPS, WebAuthn, Private Network Access и практические рекомендации'
+description:
+    'Комплексный обзор изменений в HTTP, сетевых протоколах и веб-безопасности за 2023 год - HTTP/3,
+    Privacy Sandbox, CHIPS, WebAuthn, Private Network Access и практические рекомендации'
 outline: deep
 lastUpdated: true
 ---
@@ -12,7 +14,9 @@ lastUpdated: true
 
 ## Обзор года
 
-2023 год стал переломным для веб-безопасности и сетевых протоколов. Индустрия активно двигалась в сторону приватности, партиционированного хранения и новых протоколов передачи данных. Ключевые темы года:
+2023 год стал переломным для веб-безопасности и сетевых протоколов. Индустрия активно двигалась в
+сторону приватности, партиционированного хранения и новых протоколов передачи данных. Ключевые темы
+года:
 
 - **Privacy-first**: запуск Privacy Sandbox APIs (Chrome 115), партиционированные cookies (CHIPS)
 - **HTTP/3 adoption**: рост с 37% до 40% трафика, поддержка в Firefox 114
@@ -85,7 +89,8 @@ HTTP-протоколы и безопасность неразрывно свя�
 
 ### 2. HTTP Headers — новые и обновлённые заголовки
 
-HTTP заголовки — критический механизм для контроля безопасности, приватности и производительности веб-приложений.
+HTTP заголовки — критический механизм для контроля безопасности, приватности и производительности
+веб-приложений.
 
 #### 2.1 Security Headers
 
@@ -143,7 +148,8 @@ Permissions-Policy: fullscreen=(self "https://cdn.example.com")
 - Firefox: с версии 90 (июль 2021)
 - **Safari 16.4: добавлена поддержка (март 2023)** ⭐
 
-**Ключевая веха 2023**: Safari 16.4 (27 марта 2023) добавил поддержку Fetch Metadata Request Headers, достигнув кроссбраузерной совместимости.
+**Ключевая веха 2023**: Safari 16.4 (27 марта 2023) добавил поддержку Fetch Metadata Request
+Headers, достигнув кроссбраузерной совместимости.
 
 **Baseline Status**: **Newly Available (март 2023)**
 
@@ -276,7 +282,8 @@ app.use((req, res, next) => {
 
 **Security implications**:
 
-Критическое улучшение безопасности, защищающее домашние и корпоративные сети от атак через публичные веб-сайты. Без PNA, вредоносный сайт мог атаковать роутер пользователя на `192.168.1.1`.
+Критическое улучшение безопасности, защищающее домашние и корпоративные сети от атак через публичные
+веб-сайты. Без PNA, вредоносный сайт мог атаковать роутер пользователя на `192.168.1.1`.
 
 **Источники**:
 
@@ -294,7 +301,9 @@ app.use((req, res, next) => {
 - Firefox: не поддерживается (весь 2023)
 - Safari: не поддерживается (весь 2023)
 
-**Ключевая веха февраля 2023**: Chrome 110 завершил постепенное сокращение информации в User-Agent string, усиливая необходимость использования Client Hints для получения детальной информации о браузере и устройстве.
+**Ключевая веха февраля 2023**: Chrome 110 завершил постепенное сокращение информации в User-Agent
+string, усиливая необходимость использования Client Hints для получения детальной информации о
+браузере и устройстве.
 
 **Default Headers (Low Entropy)**:
 
@@ -426,7 +435,9 @@ Set-Cookie: __Host-payment-session=abc123;
 
 **Security implications**:
 
-CHIPS — часть Privacy Sandbox инициативы, направленной на отказ от third-party cookies при сохранении необходимой функциональности. Partitioned cookies предотвращают cross-site tracking, так как каждый top-level site имеет свой изолированный набор cookies для embedded content.
+CHIPS — часть Privacy Sandbox инициативы, направленной на отказ от third-party cookies при
+сохранении необходимой функциональности. Partitioned cookies предотвращают cross-site tracking, так
+как каждый top-level site имеет свой изолированный набор cookies для embedded content.
 
 **Источники**:
 
@@ -1169,7 +1180,8 @@ decoder.decode(encodedChunk);
 
 **Baseline Status**: **Newly Available (март 2023)** ⭐
 
-**Ключевая веха 2023**: Safari 16.4 и Firefox 109 добавили поддержку, достигнув полной кроссбраузерной совместимости.
+**Ключевая веха 2023**: Safari 16.4 и Firefox 109 добавили поддержку, достигнув полной
+кроссбраузерной совместимости.
 
 **API**:
 
@@ -1417,7 +1429,9 @@ Speculation-Rules: "/speculation-rules.json"
 
 ### 1. Privacy Sandbox — общая доступность
 
-**7 сентября 2023**: Google объявил о general availability Privacy Sandbox APIs — Topics, Protected Audience, Attribution Reporting, Private Aggregation, Shared Storage и Fenced Frames. Эти функции были включены для более чем половины пользователей Google Chrome.
+**7 сентября 2023**: Google объявил о general availability Privacy Sandbox APIs — Topics, Protected
+Audience, Attribution Reporting, Private Aggregation, Shared Storage и Fenced Frames. Эти функции
+были включены для более чем половины пользователей Google Chrome.
 
 **Chrome Stable 115** (июль 2023): ключевые relevance и measurement APIs введены в Chrome Stable.
 
@@ -1425,11 +1439,13 @@ Speculation-Rules: "/speculation-rules.json"
 
 **Описание**:
 
-Topics API генерирует signals для interest-based advertising без third-party cookies или других user identifiers, которые отслеживают пользователей across sites.
+Topics API генерирует signals для interest-based advertising без third-party cookies или других user
+identifiers, которые отслеживают пользователей across sites.
 
 **Механизм работы**:
 
-1. Браузер определяет "topics of interest" на основе browsing history пользователя за последние 3 недели
+1. Браузер определяет "topics of interest" на основе browsing history пользователя за последние 3
+   недели
 2. Topics выбираются из taxonomy примерно 350 категорий (например, "Travel", "Fitness", "News")
 3. API предоставляет до 3 topics для каждого caller (ad tech)
 4. Topics обновляются еженедельно
@@ -1485,7 +1501,8 @@ Permissions-Policy: browsing-topics=(self)
 
 - ✅ Значительное улучшение приватности по сравнению с third-party cookies
 - ✅ Topics ограничены по количеству (до 3 на caller) и обновляются еженедельно
-- ✅ Пользователи могут видеть и удалять свои topics в Chrome settings (`chrome://settings/adPrivacy`)
+- ✅ Пользователи могут видеть и удалять свои topics в Chrome settings
+  (`chrome://settings/adPrivacy`)
 - ✅ Topics доступны только для sites, которые пользователь действительно посещал
 
 **Источники**:
@@ -1497,7 +1514,8 @@ Permissions-Policy: browsing-topics=(self)
 
 **Описание**:
 
-Protected Audience API выбирает рекламу для remarketing и custom audience use cases, предназначен для смягчения third-party tracking across sites.
+Protected Audience API выбирает рекламу для remarketing и custom audience use cases, предназначен
+для смягчения third-party tracking across sites.
 
 **Переименование**: ранее назывался FLEDGE (First Locally-Executed Decision over Groups Experiment).
 
@@ -1588,7 +1606,8 @@ Permissions-Policy: join-ad-interest-group=(self), run-ad-auction=(self)
 
 **Описание**:
 
-Attribution Reporting API позволяет коррелировать ad clicks или ad views с conversions. Ad techs могут генерировать event-level или summary reports.
+Attribution Reporting API позволяет коррелировать ad clicks или ad views с conversions. Ad techs
+могут генерировать event-level или summary reports.
 
 **Два типа отчётов**:
 
@@ -1687,7 +1706,8 @@ Attribution-Reporting-Register-Trigger: {
 
 **Описание**:
 
-Shared Storage API позволяет sites хранить и access unpartitioned cross-site data в secure environment.
+Shared Storage API позволяет sites хранить и access unpartitioned cross-site data в secure
+environment.
 
 **Use cases**:
 
@@ -1761,7 +1781,8 @@ Permissions-Policy: shared-storage=(self)
 
 **Security implications**:
 
-Output gates критически важны для предотвращения утечки cross-site information. Worklet environment изолирован и не имеет доступа к network или DOM.
+Output gates критически важны для предотвращения утечки cross-site information. Worklet environment
+изолирован и не имеет доступа к network или DOM.
 
 **Источники**:
 
@@ -1771,7 +1792,8 @@ Output gates критически важны для предотвращения
 
 **Описание**:
 
-Fenced Frames — это HTML element для embedded content, которое изолирует content от embedding page, предотвращая communication и data sharing.
+Fenced Frames — это HTML element для embedded content, которое изолирует content от embedding page,
+предотвращая communication и data sharing.
 
 **Отличия от iframe**:
 
@@ -1808,7 +1830,8 @@ document.getElementById('ad-slot').appendChild(fencedFrame);
 
 **Security implications**:
 
-Строгая изоляция предотвращает tracking через embedded content. Fenced Frames essential для Privacy Sandbox, обеспечивая возможность показа персонализированной рекламы без утечки user data.
+Строгая изоляция предотвращает tracking через embedded content. Fenced Frames essential для Privacy
+Sandbox, обеспечивая возможность показа персонализированной рекламы без утечки user data.
 
 **Источники**:
 
@@ -1826,13 +1849,16 @@ CSP Level 3 находится в статусе Working Draft в рамках W
 
 #### 2.2 CSP Level 3 директивы — `script-src-elem` и `script-src-attr`
 
-Эти директивы являются дополнениями CSP Level 3, обеспечивающими более гранулярный контроль над выполнением JavaScript.
+Эти директивы являются дополнениями CSP Level 3, обеспечивающими более гранулярный контроль над
+выполнением JavaScript.
 
 **Описание**:
 
 - `script-src-elem` — указывает допустимые источники для элементов `<script>`
-- `script-src-attr` — указывает допустимые источники для inline обработчиков событий JavaScript (например, `onclick`, `onerror`)
-- `style-src-elem` — указывает допустимые источники для элементов `<style>` и `<link rel="stylesheet">`
+- `script-src-attr` — указывает допустимые источники для inline обработчиков событий JavaScript
+  (например, `onclick`, `onerror`)
+- `style-src-elem` — указывает допустимые источники для элементов `<style>` и
+  `<link rel="stylesheet">`
 - `style-src-attr` — указывает допустимые источники для inline стилей
 
 **Browser support (2023)**:
@@ -1843,7 +1869,9 @@ CSP Level 3 находится в статусе Working Draft в рамках W
 
 **Механизм работы**:
 
-Если сайт указывает новые директивы, CSP3-совместимый браузер игнорирует любую директиву `script-src` в этой политике. Браузер без такой поддержки игнорирует неизвестные директивы и вместо этого использует `script-src`.
+Если сайт указывает новые директивы, CSP3-совместимый браузер игнорирует любую директиву
+`script-src` в этой политике. Браузер без такой поддержки игнорирует неизвестные директивы и вместо
+этого использует `script-src`.
 
 `script-src` служит fallback для `script-src-elem` и `script-src-attr`.
 
@@ -1867,7 +1895,9 @@ Content-Security-Policy:
 
 **Security implications**:
 
-Более гранулярный контроль позволяет создавать более строгие политики безопасности, разделяя правила для элементов и атрибутов. Это особенно полезно для предотвращения XSS через inline обработчики событий при сохранении возможности использования внешних скриптов.
+Более гранулярный контроль позволяет создавать более строгие политики безопасности, разделяя правила
+для элементов и атрибутов. Это особенно полезно для предотвращения XSS через inline обработчики
+событий при сохранении возможности использования внешних скриптов.
 
 **Baseline статус**: Не входит в Baseline (ограниченная поддержка браузерами)
 
@@ -1883,8 +1913,7 @@ Content-Security-Policy:
 
 **Спецификация**: [W3C Web Authentication Level 3](https://www.w3.org/TR/webauthn-3/)
 
-**First Public Working Draft**: 27 апреля 2021
-**Активная разработка в 2023**: да
+**First Public Working Draft**: 27 апреля 2021 **Активная разработка в 2023**: да
 
 **Добавления в Level 3**:
 
@@ -1905,9 +1934,13 @@ Content-Security-Policy:
 
 **Описание**:
 
-Conditional UI — это feature в WebAuthn, который динамически отображает passkeys или традиционные password options на основе того, есть ли у пользователя зарегистрированный credential (resident key) с веб-сайтом или приложением.
+Conditional UI — это feature в WebAuthn, который динамически отображает passkeys или традиционные
+password options на основе того, есть ли у пользователя зарегистрированный credential (resident key)
+с веб-сайтом или приложением.
 
-Credential selection UI отображается только если пользователь имеет discoverable credential, зарегистрированный с Relying Party на их authenticator, при этом credential отображается вместе с autofilled passwords.
+Credential selection UI отображается только если пользователь имеет discoverable credential,
+зарегистрированный с Relying Party на их authenticator, при этом credential отображается вместе с
+autofilled passwords.
 
 **Browser support (2023)**:
 
@@ -1971,7 +2004,8 @@ if (available) {
 
 **Security implications**:
 
-Conditional UI значительно улучшает UX для passwordless authentication, делая passkeys более accessible и convenient, что ведёт к большему adoption.
+Conditional UI значительно улучшает UX для passwordless authentication, делая passkeys более
+accessible и convenient, что ведёт к большему adoption.
 
 **Baseline статус**: Approaching Baseline (с октября 2023)
 
@@ -1985,14 +2019,19 @@ Conditional UI значительно улучшает UX для passwordless au
 
 **Описание**:
 
-Passkeys — это marketing term, популяризированный Google и Apple, относится к Multi-Device FIDO Credentials, реализованным с WebAuthn specification.
+Passkeys — это marketing term, популяризированный Google и Apple, относится к Multi-Device FIDO
+Credentials, реализованным с WebAuthn specification.
 
-Passkeys более безопасны, чем passwords, потому что они позволяют пользователям sign in с biometric sensor (отпечаток пальца, facial recognition), PIN или pattern, освобождая от необходимости запоминать и управлять passwords.
+Passkeys более безопасны, чем passwords, потому что они позволяют пользователям sign in с biometric
+sensor (отпечаток пальца, facial recognition), PIN или pattern, освобождая от необходимости
+запоминать и управлять passwords.
 
 **Security features**:
 
-1. **Phishing Resistance**: attackers не могут использовать passkey на фальшивом сайте, так как signature меняется с origin сайта
-2. **Data Breach Protection**: при утечке данных attacker получает только public key, который бесполезен
+1. **Phishing Resistance**: attackers не могут использовать passkey на фальшивом сайте, так как
+   signature меняется с origin сайта
+2. **Data Breach Protection**: при утечке данных attacker получает только public key, который
+   бесполезен
 3. **Credential Isolation**: passkey уникален для каждого сервиса
 
 **Browser support (2023)**:
@@ -2150,7 +2189,8 @@ function arrayBufferToBase64(buffer) {
 
 **Security implications**:
 
-Passkeys представляют major shift от passwords к phishing-resistant, user-friendly authentication. 2023 год — критический год для adoption passkeys across major platforms.
+Passkeys представляют major shift от passwords к phishing-resistant, user-friendly authentication.
+2023 год — критический год для adoption passkeys across major platforms.
 
 **Baseline статус**: Rapidly approaching Baseline (2023-2024)
 
@@ -2165,7 +2205,8 @@ Passkeys представляют major shift от passwords к phishing-resista
 
 **Описание**:
 
-`SameSite` cookie attribute защищает от CSRF атак, ограничивая отправку cookies в cross-site контексте.
+`SameSite` cookie attribute защищает от CSRF атак, ограничивая отправку cookies в cross-site
+контексте.
 
 **Значения**:
 
@@ -2183,9 +2224,11 @@ Passkeys представляют major shift от passwords к phishing-resista
 
 **Security implications**:
 
-Lax default значительно повышает защиту от CSRF атак без необходимости явных действий со стороны разработчиков.
+Lax default значительно повышает защиту от CSRF атак без необходимости явных действий со стороны
+разработчиков.
 
-Однако inconsistency между браузерами означает, что разработчики должны явно устанавливать `SameSite` attribute для предсказуемого поведения.
+Однако inconsistency между браузерами означает, что разработчики должны явно устанавливать
+`SameSite` attribute для предсказуемого поведения.
 
 **Migration guidance**:
 
@@ -2210,17 +2253,22 @@ Set-Cookie: tracking=xyz; Secure; SameSite=None
 
 #### 4.2 Third-party cookies deprecation timeline
 
-**Chrome announcement (май 2023)**: Privacy Sandbox готов, Chrome планирует отказаться от third-party cookies в 2024 году.
+**Chrome announcement (май 2023)**: Privacy Sandbox готов, Chrome планирует отказаться от
+third-party cookies в 2024 году.
 
-**Firefox (2023)**: Total Cookie Protection в Enhanced Tracking Protection's Strict Mode (добавлено в Firefox 111, март 2023).
+**Firefox (2023)**: Total Cookie Protection в Enhanced Tracking Protection's Strict Mode (добавлено
+в Firefox 111, март 2023).
 
-Total Cookie Protection изолирует cookies по first-party context, эффективно партиционируя их аналогично CHIPS.
+Total Cookie Protection изолирует cookies по first-party context, эффективно партиционируя их
+аналогично CHIPS.
 
-**Safari**: продолжение Intelligent Tracking Prevention (ITP), блокирующего third-party tracking cookies по умолчанию с предыдущих лет.
+**Safari**: продолжение Intelligent Tracking Prevention (ITP), блокирующего third-party tracking
+cookies по умолчанию с предыдущих лет.
 
 **Security implications**:
 
-2023 год — критический год для перехода веб-индустрии от third-party cookies к privacy-preserving альтернативам.
+2023 год — критический год для перехода веб-индустрии от third-party cookies к privacy-preserving
+альтернативам.
 
 **Baseline статус**: Процесс в стадии перехода
 
@@ -2237,13 +2285,16 @@ Total Cookie Protection изолирует cookies по first-party context, э�
 
 **Что изменилось**:
 
-Начиная с Chrome 115, веб-сайты не могут устанавливать `document.domain`. Chrome сделал `document.domain` immutable.
+Начиная с Chrome 115, веб-сайты не могут устанавливать `document.domain`. Chrome сделал
+`document.domain` immutable.
 
-Deprecation отключил возможность relaxing same-origin policy путём установки `document.domain` по умолчанию в Chrome 115.
+Deprecation отключил возможность relaxing same-origin policy путём установки `document.domain` по
+умолчанию в Chrome 115.
 
 **Impact**:
 
-Использование `document.domain` setter не бросает exception, но перестаёт иметь эффект. Изменение было rolled out прогрессивно, начиная с Chrome 115.
+Использование `document.domain` setter не бросает exception, но перестаёт иметь эффект. Изменение
+было rolled out прогрессивно, начиная с Chrome 115.
 
 **Migration guidance**:
 
@@ -2294,7 +2345,8 @@ Origin-Agent-Cluster: ?0
 
 **Security implications**:
 
-Критическое security improvement. `document.domain` setter позволял обходить same-origin policy, что создавало security risks.
+Критическое security improvement. `document.domain` setter позволял обходить same-origin policy, что
+создавало security risks.
 
 **Browser support (2023)**:
 
@@ -2315,15 +2367,18 @@ Origin-Agent-Cluster: ?0
 **Timeline**:
 
 - **Chromium 97**: удалён для third-party contexts
-- **Chromium 105**: deprecated в insecure contexts, показывалось предупреждение в DevTools Issue panel
+- **Chromium 105**: deprecated в insecure contexts, показывалось предупреждение в DevTools Issue
+  panel
 - **Chromium 110**: удалён в insecure contexts
 - **Chrome 119**: полностью удалён во всех контекстах ⭐
 
-**Deprecation trial**: reverse origin trial позволяет разработчикам продолжать использовать WebSQL до Chrome 123, давая дополнительное время для миграции.
+**Deprecation trial**: reverse origin trial позволяет разработчикам продолжать использовать WebSQL
+до Chrome 123, давая дополнительное время для миграции.
 
 **Background**:
 
-Web SQL Database API, позволяющий хранить данные в structured manner на компьютере пользователя (внутренне основан на SQLite database engine), был введён в апреле 2009 и abandoned в ноябре 2010.
+Web SQL Database API, позволяющий хранить данные в structured manner на компьютере пользователя
+(внутренне основан на SQLite database engine), был введён в апреле 2009 и abandoned в ноябре 2010.
 
 **Migration guidance**:
 
@@ -2386,7 +2441,8 @@ request.onsuccess = (event) => {
 
 **Security implications**:
 
-Web SQL удалён частично из-за security concerns и отсутствия standardization. IndexedDB предоставляет более безопасную и стандартизированную альтернативу.
+Web SQL удалён частично из-за security concerns и отсутствия standardization. IndexedDB
+предоставляет более безопасную и стандартизированную альтернативу.
 
 **Browser support (2023)**:
 
@@ -2413,7 +2469,8 @@ Total Cookie Protection изолирует cookies по first-party context, э�
 
 **Browser support**: Firefox 111+ (март 2023)
 
-**Security implications**: значительное улучшение privacy, предотвращающее cross-site tracking через cookies.
+**Security implications**: значительное улучшение privacy, предотвращающее cross-site tracking через
+cookies.
 
 **Источники**:
 
@@ -2425,13 +2482,15 @@ Total Cookie Protection изолирует cookies по first-party context, э�
 
 **Browser support**: Firefox 110+ (февраль 2023)
 
-**Security implications**: изоляция GPU процессов для предотвращения privilege escalation и других attacks через GPU drivers.
+**Security implications**: изоляция GPU процессов для предотвращения privilege escalation и других
+attacks через GPU drivers.
 
 #### 6.2 Safari
 
 ##### Enhanced Private Browsing (Safari 17)
 
-**Описание**: Safari 17 вводит Face ID–locked Private Browsing, default blocking tracking в private mode, link-tracking removal и separate private-mode search engine settings.
+**Описание**: Safari 17 вводит Face ID–locked Private Browsing, default blocking tracking в private
+mode, link-tracking removal и separate private-mode search engine settings.
 
 **Функции**:
 
@@ -2460,11 +2519,13 @@ https://example.com/page
 
 ##### WebKit Architecture Improvements (Safari 17)
 
-**Описание**: новая архитектура позволяет WebKit изолировать powerful graphics hardware и driver access от WebContent process (который взаимодействует с untrusted content из Internet).
+**Описание**: новая архитектура позволяет WebKit изолировать powerful graphics hardware и driver
+access от WebContent process (который взаимодействует с untrusted content из Internet).
 
 Новый дизайн также позволяет WebContent process sandbox полностью блокировать IOKit access.
 
-**Security implications**: критическое улучшение security через process isolation. Graphics exploits — распространённый attack vector, изоляция снижает risk.
+**Security implications**: критическое улучшение security через process isolation. Graphics exploits
+— распространённый attack vector, изоляция снижает risk.
 
 **Browser support**: Safari 17+ (сентябрь 2023)
 
@@ -2679,8 +2740,10 @@ const credential = await navigator.credentials.get({
 - Privacy Sandbox: https://privacysandbox.google.com/
 - Google for Developers Privacy Sandbox: https://developers.google.com/privacy-sandbox/
 - CHIPS Documentation: https://developers.google.com/privacy-sandbox/3pcd/chips
-- Feedback Reports Q1 2023: https://developers.google.com/privacy-sandbox/overview/feedback/report-2023-q1
-- Feedback Reports Q2 2023: https://developers.google.com/privacy-sandbox/overview/feedback/report-2023-q2
+- Feedback Reports Q1 2023:
+  https://developers.google.com/privacy-sandbox/overview/feedback/report-2023-q1
+- Feedback Reports Q2 2023:
+  https://developers.google.com/privacy-sandbox/overview/feedback/report-2023-q2
 
 ### Security Specifications
 
@@ -2712,5 +2775,6 @@ const credential = await navigator.credentials.get({
 
 - **Дата создания отчёта**: 18.11.2025
 - **Research ID**: `frontend-baseline-2023-2025`
-- **Автор**: DeepResearch-Claude
-- **Связанные отчёты**: [HTML 2023](./html.md), [CSS 2023](./css.md), [JavaScript 2023](./javascript.md)
+- **Автор**: DeepResearch Agent
+- **Связанные отчёты**: [HTML 2023](./html.md), [CSS 2023](./css.md),
+  [JavaScript 2023](./javascript.md)

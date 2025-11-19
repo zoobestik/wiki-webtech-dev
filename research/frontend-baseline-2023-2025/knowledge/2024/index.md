@@ -337,7 +337,7 @@ Security:   15+ major initiatives (cookies reversal, post-quantum, passkeys)
 
 - **[Scope](../scope.md)** — границы и методология исследования
 - **[Baseline Initiative](../baseline-initiative.md)** — что такое Baseline
-- **[Источники данных](../../tmp/data-sources.md)** — все использованные источники
+- **[Источники данных](../data-sources.md)** — все использованные источники
 
 ### Связанные исследования
 
@@ -422,7 +422,7 @@ HTTP/3 из «emerging» стал «production standard»:
 ## Метаданные исследования
 
 - **Research ID**: `frontend-baseline-2023-2025`
-- **Методология**: DeepResearch-Claude
+- **Методология**: DeepResearch Agent
 - **Автор**: Claude (Anthropic)
 - **Дата создания**: 18 ноября 2025
 - **Версия**: 1.0
