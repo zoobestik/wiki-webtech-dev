@@ -6,7 +6,7 @@
 
 ## Быстрые ссылки
 
-- Frontend Baseline 2018–2022
+- Frontend 2018–2022
     - [Онлайн](https://zoobestik.github.io/wiki-webtech-dev/frontend-baseline-2018-2022/)
     - [GitHub (Markdown)](https://github.com/zoobestik/wiki-webtech-dev/tree/main/research/frontend-baseline-2018-2022/index.md)
 - Список исследований

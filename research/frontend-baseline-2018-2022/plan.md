@@ -1,6 +1,6 @@
 ---
 title: План исследования
-description: Детальный план и чеклист выполнения исследования Frontend Baseline 2018-2022
+description: Детальный план и чеклист выполнения исследования Frontend 2018-2022
 outline: deep
 lastUpdated: true
 ---
@@ -318,7 +318,7 @@ lastUpdated: true
 
 ### Фаза 11: Финальный отчёт
 
-- [x] Создать итоговый отчёт `./research/frontend-baseline-2018-2022/knowledge/final-report.md`
+- [x] Создать итоговый отчёт `./research/frontend-baseline-2018-2022/knowledge/index.md`
     - Обзор
     - Структура по разделам с ссылками
     - Ключевые выводы

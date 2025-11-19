@@ -335,14 +335,14 @@ Security:   15+ major initiatives (cookies reversal, post-quantum, passkeys)
 
 ### Вспомогательные материалы
 
-- **[Scope](../scope.md)** — границы и методология исследования
-- **[Baseline Initiative](../baseline-initiative.md)** — что такое Baseline
-- **[Источники данных](../data-sources.md)** — все использованные источники
+- **[Scope](../../scope.md)** — границы и методология исследования
+- **[Baseline Initiative](../../baseline-initiative.md)** — что такое Baseline
+- **[Источники данных](../../data-sources.md)** — все использованные источники
 
 ### Связанные исследования
 
-- **Предыдущий период**: [Frontend Baseline 2023](../2023/index.md)
-- **Следующий период**: Frontend Baseline 2025 _(в разработке)_
+- **Предыдущий период**: [Frontend 2023](../2023/index.md)
+- **Следующий период**: Frontend 2025 _(в разработке)_
 
 ## Ключевые выводы 2024 года
 
@@ -423,7 +423,6 @@ HTTP/3 из «emerging» стал «production standard»:
 
 - **Research ID**: `frontend-baseline-2023-2025`
 - **Методология**: DeepResearch Agent
-- **Автор**: Claude (Anthropic)
 - **Дата создания**: 18 ноября 2025
 - **Версия**: 1.0
 
@@ -447,5 +446,5 @@ HTTP/3 из «emerging» стал «production standard»:
 
 ---
 
-**Предыдущий этап**: [Исследование 2023 года](../2023/index.md) **Следующий этап**: Исследование
-2025 года _(запланировано после feedback)_
+**Предыдущий этап**: [Исследование 2023 года](../2023/index.md) **Следующий этап**:
+[Исследование 2025 года](../2025/index.md)

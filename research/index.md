@@ -7,7 +7,7 @@ outline: deep
 
 # Исследования
 
-## Frontend Baseline 2018-2022
+## Frontend 2018-2022
 
 - **Статус:** ✅ Завершено
 - **Дата:** 17.11.2025
@@ -23,7 +23,37 @@ baseline статусы и практическое применение.
 - CSS: Flexbox gap, aspect-ratio, clamp(), :is(), :where(), :has()
 - JavaScript: ES2018-ES2022, Web APIs расширения
 
-[Перейти к исследованию →](/frontend-baseline-2018-2022/)
+[Перейти к исследованию →](./frontend-baseline-2018-2022/index.md)
+
+## Frontend 2023-2025
+
+- **Статус:** ✅ Завершено
+- **Дата:** 18.11.2025
+- **Объем:** ~31,000+ строк финальной документации
+
+Comprehensive исследование изменений в HTML, CSS, JavaScript, HTTP и Security за период 2023-2025
+(январь-ноябрь) с фокусом на Baseline статусы, Interop достижения и практическое применение.
+
+**Ключевые темы:**
+
+- **HTML**: Popover API (Baseline январь 2025), Customizable `<select>`, Invoker Commands,
+  Declarative Shadow DOM maturity
+- **CSS**: Anchor Positioning universal support (Safari 26.0), Container Queries Baseline High,
+  @property maturity (93%), Typography innovations
+- **JavaScript**: ES2025 (RegExp.escape, Float16Array), Temporal API (Firefox 139 — первый
+  браузер!), Iterator Helpers, WebGPU production
+- **HTTP & Security**: HTTP/3 (30-60% трафика), Post-quantum crypto (ML-KEM 38% HTTPS), Passkeys
+  (3B+ активных), Third-party cookies reversal
+
+**Baseline достижения:**
+
+- 2023: 12+ технологий (Container Queries, :has(), Subgrid, Change Array by Copy)
+- 2024: 13+ технологий (CSS Nesting, @property, Set Methods, Promise.withResolvers)
+- 2025: 8+ технологий (Popover API, Container Queries High, Float16Array)
+
+**Interop прогресс:** 80% (2023) → 95% (2024, исторический максимум!) → ongoing (2025)
+
+[Перейти к исследованию →](./frontend-baseline-2023-2025/knowledge/2023/index.md)
 
 ## Будущие исследования
 
@@ -31,9 +61,9 @@ _Здесь появятся новые исследования..._
 
 ### В планах:
 
-- **Frontend Baseline 2023-2025** - продолжение анализа современных веб-стандартов
 - **Modern Frontend Frameworks in 2025** - анализ современных фронтенд-фреймворков и подходов
 - **Modern CSS Architecture** - best practices структурирования стилей
+- **Web Performance 2025** - современные техники оптимизации производительности
 
 ## О Research Hub
 

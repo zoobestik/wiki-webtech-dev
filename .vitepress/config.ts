@@ -7,11 +7,11 @@ const nav: DefaultTheme.NavItem[] = [
         text: 'Результаты',
         items: [
             {
-                text: 'Frontend Baseline 2018-2022',
+                text: 'Frontend 2018-2022',
                 link: '/frontend-baseline-2018-2022/',
             },
             {
-                text: 'Frontend Baseline 2023-2025',
+                text: 'Frontend 2023-2025',
                 link: '/frontend-baseline-2023-2025/knowledge/2023/',
             },
         ],
@@ -23,11 +23,11 @@ const MAIN_SIDEBAR: DefaultTheme.SidebarItem[] = [
         text: 'Фундаментальный Web',
         items: [
             {
-                text: 'Frontend Baseline 2018-2022',
+                text: 'Frontend 2018-2022',
                 link: '/frontend-baseline-2018-2022/',
             },
             {
-                text: 'Frontend Baseline 2023-2025',
+                text: 'Frontend 2023-2025',
                 link: '/frontend-baseline-2023-2025/knowledge/2023/',
             },
         ],
@@ -36,7 +36,7 @@ const MAIN_SIDEBAR: DefaultTheme.SidebarItem[] = [
 
 const FRONTEND_BASELINE_2018_2022_SIDEBAR: DefaultTheme.SidebarItem[] = [
     {
-        text: 'Frontend Baseline 2018-2022',
+        text: 'Frontend 2018-2022',
         link: '/frontend-baseline-2018-2022/',
         items: [
             {
@@ -114,33 +114,36 @@ const FRONTEND_BASELINE_2023_2025_SIDEBAR: DefaultTheme.SidebarItem[] = [
             },
         ],
     },
-    // {
-    //     text: '2025',
-    //     link: '/frontend-baseline-2023-2025/knowledge/2025/',
-    //     items: [
-    //         { text: 'HTML', link: '/frontend-baseline-2023-2025/knowledge/2025/html' },
-    //         { text: 'CSS', link: '/frontend-baseline-2023-2025/knowledge/2025/css' },
-    //         {
-    //             text: 'JavaScript & Web APIs',
-    //             link: '/frontend-baseline-2023-2025/knowledge/2025/javascript',
-    //         },
-    //         {
-    //             text: 'HTTP и Протоколы',
-    //             link: '/frontend-baseline-2023-2025/knowledge/2025/http-protocols',
-    //         },
-    //         { text: 'Безопасность', link: '/frontend-baseline-2023-2025/knowledge/2025/security' },
-    //     ],
-    // },
+    {
+        text: '2025',
+        link: '/frontend-baseline-2023-2025/knowledge/2025/',
+        items: [
+            { text: 'HTML', link: '/frontend-baseline-2023-2025/knowledge/2025/html.html' },
+            { text: 'CSS', link: '/frontend-baseline-2023-2025/knowledge/2025/css.html' },
+            {
+                text: 'JavaScript & Web APIs',
+                link: '/frontend-baseline-2023-2025/knowledge/2025/javascript.html',
+            },
+            {
+                text: 'HTTP и Безопасность',
+                link: '/frontend-baseline-2023-2025/knowledge/2025/http-security.html',
+            },
+        ],
+    },
     {
         text: 'Методология',
         items: [
             {
                 text: 'Scope исследования',
-                link: '/frontend-baseline-2023-2025/knowledge/scope.html',
+                link: '/frontend-baseline-2023-2025/scope.html',
             },
             {
                 text: 'Источники данных',
-                link: '/frontend-baseline-2023-2025/knowledge/data-sources.html',
+                link: '/frontend-baseline-2023-2025/data-sources.html',
+            },
+            {
+                text: 'Timeline браузеров',
+                link: '/frontend-baseline-2023-2025/browser-timeline.html',
             },
             { text: 'План исследования', link: '/frontend-baseline-2023-2025/plan.html' },
         ],

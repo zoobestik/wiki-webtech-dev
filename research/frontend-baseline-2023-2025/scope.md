@@ -1,11 +1,11 @@
 ---
 title: Scope исследования
-description: Границы, методология и критерии отбора для исследования Frontend Baseline 2023–2025
+description: Границы, методология и критерии отбора для исследования Frontend 2023–2025
 outline: deep
 lastUpdated: true
 ---
 
-# Scope исследования: Frontend Baseline 2023–2025
+# Scope исследования: Frontend 2023–2025
 
 ## Временные границы
 
@@ -289,4 +289,4 @@ lastUpdated: true
 - **Дата создания:** 18.11.2025
 - **Методология:** DeepResearch Agent
 - **Связанное исследование:**
-  [`frontend-baseline-2018-2022`](../../frontend-baseline-2018-2022/knowledge/final-report.md)
+  [`frontend-baseline-2018-2022`](../frontend-baseline-2018-2022/knowledge/index.md)

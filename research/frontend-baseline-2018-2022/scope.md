@@ -1,11 +1,11 @@
 ---
 title: Scope исследования
-description: Границы, методология и критерии отбора для исследования Frontend Baseline 2018-2022
+description: Границы, методология и критерии отбора для исследования Frontend 2018-2022
 outline: deep
 lastUpdated: true
 ---
 
-# Scope исследования: Frontend Baseline 2018–2022
+# Scope исследования: Frontend 2018–2022
 
 ## Временные границы
 

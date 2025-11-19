@@ -260,15 +260,15 @@ Security:   10+ major initiatives
 
 ### Вспомогательные материалы
 
-- **[Scope](../scope.md)** — границы и методология исследования
-- **[Baseline Initiative](../baseline-initiative.md)** — что такое Baseline
-- **[Источники данных](../data-sources.md)** — все использованные источники
+- **[Scope](../../scope.md)** — границы и методология исследования
+- **[Baseline Initiative](../../baseline-initiative.md)** — что такое Baseline
+- **[Источники данных](../../data-sources.md)** — все использованные источники
 
 ### Связанные исследования
 
 - **Предыдущий период**:
-  [Frontend Baseline 2018-2022](../../../frontend-baseline-2018-2022/knowledge/final-report.md)
-- **Следующий период**: Frontend Baseline 2024 _(в разработке)_
+  [Frontend 2018-2022](../../../frontend-baseline-2018-2022/knowledge/index.md)
+- **Следующий период**: Frontend 2024 _(в разработке)_
 
 ## Ключевые выводы 2023 года
 
@@ -318,7 +318,6 @@ Security:   10+ major initiatives
 
 **Research ID**: `frontend-baseline-2023-2025`  
 **Методология**: DeepResearch Agent  
-**Автор**: Claude (Anthropic)  
 **Дата создания**: 18 ноября 2025  
 **Версия**: 1.0
 
