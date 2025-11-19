@@ -7,11 +7,11 @@ const nav: DefaultTheme.NavItem[] = [
         text: 'Результаты',
         items: [
             {
-                text: 'Frontend 2018-2022',
+                text: 'Веб-технологии 2018-2022',
                 link: '/frontend-baseline-2018-2022/',
             },
             {
-                text: 'Frontend 2023-2025',
+                text: 'Веб-технологии 2023-2025',
                 link: '/frontend-baseline-2023-2025/knowledge/2023/',
             },
         ],
@@ -23,11 +23,11 @@ const MAIN_SIDEBAR: DefaultTheme.SidebarItem[] = [
         text: 'Фундаментальный Web',
         items: [
             {
-                text: 'Frontend 2018-2022',
+                text: 'Веб-технологии 2018-2022',
                 link: '/frontend-baseline-2018-2022/',
             },
             {
-                text: 'Frontend 2023-2025',
+                text: 'Веб-технологии 2023-2025',
                 link: '/frontend-baseline-2023-2025/knowledge/2023/',
             },
         ],
@@ -36,7 +36,7 @@ const MAIN_SIDEBAR: DefaultTheme.SidebarItem[] = [
 
 const FRONTEND_BASELINE_2018_2022_SIDEBAR: DefaultTheme.SidebarItem[] = [
     {
-        text: 'Frontend 2018-2022',
+        text: 'Веб-технологии 2018-2022',
         link: '/frontend-baseline-2018-2022/',
         items: [
             {

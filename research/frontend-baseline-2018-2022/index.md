@@ -1,5 +1,5 @@
 ---
-title: Frontend 2018-2022
+title: Веб-технологии 2018-2022
 description: Комплексный исследование изменений в HTML, CSS и JavaScript за период 2018-2022
 outline: deep
 lastUpdated: true
