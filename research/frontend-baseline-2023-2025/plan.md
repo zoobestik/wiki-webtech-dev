@@ -48,12 +48,11 @@
     - Установить критерии включения/исключения технологий (что считать "базовым").
     - Completed: границы определены и документированы.
 
-- [x] Создать файл `./research/frontend-baseline-2023-2025/knowledge/scope.md`
+- [x] Создать файл `./research/frontend-baseline-2023-2025/scope.md`
     - Документировать определенные границы.
     - Перечислить основные источники данных.
     - Определить структуру годовых отчетов.
-    - Completed: `./research/frontend-baseline-2023-2025/knowledge/scope.md` создан с полной
-      документацией.
+    - Completed: `./research/frontend-baseline-2023-2025/scope.md` создан с полной документацией.
 
 ### Фаза 2: Landscape Research — Сбор актуальной информации
 

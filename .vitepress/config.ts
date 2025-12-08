@@ -41,7 +41,7 @@ const FRONTEND_BASELINE_2018_2022_SIDEBAR: DefaultTheme.SidebarItem[] = [
         items: [
             {
                 text: 'Final Report',
-                link: '/frontend-baseline-2018-2022/knowledge/final-report.html',
+                link: '/frontend-baseline-2018-2022/knowledge/',
             },
         ],
     },
@@ -67,11 +67,11 @@ const FRONTEND_BASELINE_2018_2022_SIDEBAR: DefaultTheme.SidebarItem[] = [
         items: [
             {
                 text: 'Scope исследования',
-                link: '/frontend-baseline-2018-2022/knowledge/scope.html',
+                link: '/frontend-baseline-2018-2022/scope.html',
             },
             {
                 text: 'Timeline браузеров',
-                link: '/frontend-baseline-2018-2022/knowledge/browser-timeline.html',
+                link: '/frontend-baseline-2018-2022/browser-timeline.html',
             },
             {
                 text: 'План исследования',

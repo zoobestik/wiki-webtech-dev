@@ -42,8 +42,8 @@ lastUpdated: true
       итогового отчёта.
 
 - [x] Создать файл `scope.md` с детальным описанием границ исследования
-    - **Выполнено:** Создан `./research/frontend-baseline-2018-2022/knowledge/scope.md` с детальным
-      описанием всех аспектов scope исследования.
+    - **Выполнено:** Создан `./research/frontend-baseline-2018-2022/scope.md` с детальным описанием
+      всех аспектов scope исследования.
 
 ### Фаза 2: Контекстное исследование и timeline браузеров
 
@@ -63,7 +63,7 @@ lastUpdated: true
       во всех четырёх основных браузерах в последних 2 мажорных версиях. Документированы источники
       для проверки: Can I Use, MDN BCD, web.dev Baseline.
 
-- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/browser-timeline.md`
+- [x] Создать файл `./research/frontend-baseline-2018-2022/browser-timeline.md`
     - **Выполнено:** Создан подробный файл с timeline релизов, таблицами, mermaid диаграммой
       эволюции релизных циклов, статистикой и выводами.
 
