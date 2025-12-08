@@ -69,9 +69,9 @@ lastUpdated: true
 
 ### 📁 Основные документы
 
-1. **[html-changes.md](html.md)** — детальный обзор HTML изменений с примерами
-2. **[css-changes.md](css.md)** — comprehensive CSS изменения
-3. **[javascript-webapis-summary.md](javascript.md)** — ключевые JavaScript и Web API изменения
+1. **[html.md](html.md)** — детальный обзор HTML изменений с примерами
+2. **[css.md](css.md)** — comprehensive CSS изменения
+3. **[javascript.md](javascript.md)** — ключевые JavaScript и Web API изменения
 4. **[final-report.md](./index.md)** — этот документ (executive summary и roadmap)
 5. **[scope.md](../scope.md)** — границы исследования, критерии, методология
 6. **[browser-timeline.md](../browser-timeline.md)** — timeline релизов браузеров, baseline
@@ -558,20 +558,20 @@ button:focus-visible {
 
 **Приоритет 1 — Must know:**
 
-1. **HTML `<dialog>`** → Прочитать [html-changes.md](html.md), секция `<dialog>`
+1. **HTML `<dialog>`** → Прочитать [html.md](html.md), секция `<dialog>`
     - Практика: создать модальное окно без библиотек
     - Изучить accessibility автоматику
 
-2. **CSS Layout набор** → [css-changes.md](css.md), секции Layout
+2. **CSS Layout набор** → [css.md](css.md), секции Layout
     - Flexbox `gap`
     - `aspect-ratio`
     - Потренировать responsive cards без хаков
 
-3. **CSS функции** → [css-changes.md](css.md), секция Functions
+3. **CSS функции** → [css.md](css.md), секция Functions
     - `clamp()`, `min()`, `max()`
     - Практика: responsive typography без media queries
 
-4. **JavaScript ES2020** → [javascript-webapis-summary.md](javascript.md), секция ES2020
+4. **JavaScript ES2020** → [javascript.md](javascript.md), секция ES2020
     - Optional chaining (`?.`)
     - Nullish coalescing (`??`)
     - Рефакторинг существующего кода с этими фичами
@@ -580,16 +580,16 @@ button:focus-visible {
 
 **Приоритет 2 — Should know:**
 
-1. **CSS селекторы** → [css-changes.md](css.md)
+1. **CSS селекторы** → [css.md](css.md)
     - `:is()`, `:where()`
     - `:focus-visible`
     - Практика: упрощение сложных селекторов
 
-2. **Logical properties** → [css-changes.md](css.md)
+2. **Logical properties** → [css.md](css.md)
     - Изучить mapping (физические → логические)
     - Потренировать на RTL layout
 
-3. **JavaScript ES2021-2022** → [javascript-webapis-summary.md](javascript.md)
+3. **JavaScript ES2021-2022** → [javascript.md](javascript.md)
     - `Array.at()`, `Object.hasOwn()`
     - Top-level await
     - Private class fields
@@ -598,16 +598,16 @@ button:focus-visible {
 
 **Приоритет 3 — Important:**
 
-1. **Lazy loading** → [html-changes.md](html.md)
+1. **Lazy loading** → [html.md](html.md)
     - `loading="lazy"` для images и iframes
     - Feature detection и fallbacks
 
-2. **Performance APIs** → [javascript-webapis-summary.md](javascript.md)
+2. **Performance APIs** → [javascript.md](javascript.md)
     - Core Web Vitals tracking
     - Intersection Observer, Resize Observer
     - Практика: добавить performance monitoring
 
-3. **Accessibility media queries** → [css-changes.md](css.md)
+3. **Accessibility media queries** → [css.md](css.md)
     - `prefers-color-scheme` — Dark mode
     - `prefers-reduced-motion`
     - Практика: respect user preferences
@@ -692,9 +692,9 @@ button:focus-visible {
 ### Recommended Reading Order
 
 1. **Этот файл** (`final-report.md`) — executive summary и roadmap
-2. **[html-changes.md](html.md)** — детально HTML (70+ KB)
-3. **[css-changes.md](css.md)** — детально CSS (50+ KB)
-4. **[javascript-webapis-summary.md](javascript.md)** — ключевые JS/API изменения
+2. **[html.md](html.md)** — детально HTML (70+ KB)
+3. **[css.md](css.md)** — детально CSS (50+ KB)
+4. **[javascript.md](javascript.md)** — ключевые JS/API изменения
 5. **[scope.md](../scope.md)** — понять границы исследования
 6. **[browser-timeline.md](../browser-timeline.md)** — контекст релизов
 

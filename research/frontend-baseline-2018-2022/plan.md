@@ -89,7 +89,7 @@ lastUpdated: true
     - **Выполнено:** Application Cache (AppCache) — полное удаление к 2021, `<keygen>` удалён, Flash
       Player EOL (декабрь 2020 — январь 2021).
 
-- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/html-changes.md`
+- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/html.md`
     - **Выполнено:** Создан comprehensive файл 70+ KB с подробным описанием всех HTML изменений,
       примерами кода, browser support tables, практическими рекомендациями.
 
@@ -141,7 +141,7 @@ lastUpdated: true
 - [x] Исследовать депрекации CSS
     - **Выполнено:** Значительных депрекаций CSS в период не было, фокус на добавлении фич.
 
-- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/css-changes.md`
+- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/css.md`
     - **Выполнено:** Создан comprehensive файл 28KB с детальным описанием всех CSS изменений,
       примерами кода, browser support, практическими рекомендациями.
 
@@ -213,9 +213,9 @@ lastUpdated: true
     - **Выполнено:** AppCache полное удаление (2020-2021), синхронный XHR deprecated, Flash Player
       EOL.
 
-- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/javascript-webapis-changes.md`
-    - **Выполнено:** Создан файл `javascript-webapis-summary.md` (16KB) с ключевыми изменениями
-      ECMAScript и Web APIs, примерами кода.
+- [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/javascript-webapis.md`
+    - **Выполнено:** Создан файл `javascript.md` (16KB) с ключевыми изменениями ECMAScript и Web
+      APIs, примерами кода.
 
 ### Фаза 6: Инициативы и рабочие группы
 
@@ -223,15 +223,15 @@ lastUpdated: true
     - CSS WG
     - Web Platform WG
     - WICG (Web Incubator Community Group)
-    - **Выполнено:** Информация интегрирована в соответствующие файлы (html-changes.md,
-      css-changes.md), включая переход управления к WHATWG (май 2019).
+    - **Выполнено:** Информация интегрирована в соответствующие файлы (html.md, css.md), включая
+      переход управления к WHATWG (май 2019).
 
 - [x] Исследовать ключевые WHATWG инициативы 2018–2022
     - HTML Living Standard изменения
     - Fetch Standard
     - Streams Standard
     - **Выполнено:** WHATWG Living Standard transition (2019), ключевые инициативы задокументированы
-      в html-changes.md и browser-timeline.md.
+      в html.md и browser-timeline.md.
 
 - [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/initiatives-and-specs.md`
     - **Выполнено:** Информация интегрирована в final-report.md и соответствующие тематические файлы
@@ -267,12 +267,10 @@ lastUpdated: true
       годам в final-report.md.
 
 - [x] Создать таблицы browser support для baseline статусов
-    - **Выполнено:** Множественные browser support tables в html-changes.md, css-changes.md с
-      версиями и датами.
+    - **Выполнено:** Множественные browser support tables в html.md, css.md с версиями и датами.
 
 - [x] Создать сравнительные таблицы для конкурирующих подходов
-    - **Выполнено:** Сравнительные таблицы (до/после) интегрированы в css-changes.md и
-      final-report.md.
+    - **Выполнено:** Сравнительные таблицы (до/после) интегрированы в css.md и final-report.md.
 
 - [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/visualizations.md`
     - **Выполнено:** Визуализации интегрированы в соответствующие файлы для контекстуальности.
@@ -280,13 +278,13 @@ lastUpdated: true
 ### Фаза 9: Примеры кода
 
 - [x] Подготовить базовые примеры кода для ключевых HTML изменений
-    - **Выполнено:** 30+ примеров кода в html-changes.md для всех ключевых фич.
+    - **Выполнено:** 30+ примеров кода в html.md для всех ключевых фич.
 
 - [x] Подготовить базовые примеры кода для ключевых CSS изменений
-    - **Выполнено:** 50+ примеров кода в css-changes.md, включая до/после сравнения.
+    - **Выполнено:** 50+ примеров кода в css.md, включая до/после сравнения.
 
 - [x] Подготовить базовые примеры кода для ключевых JavaScript/Web API изменений
-    - **Выполнено:** 20+ примеров в javascript-webapis-summary.md для ECMAScript и Web APIs.
+    - **Выполнено:** 20+ примеров в javascript.md для ECMAScript и Web APIs.
 
 - [x] Создать файл `./research/frontend-baseline-2018-2022/knowledge/code-examples.md`
     - **Выполнено:** Примеры интегрированы в соответствующие тематические файлы для лучшего

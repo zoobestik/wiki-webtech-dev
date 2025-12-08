@@ -50,15 +50,15 @@ const FRONTEND_BASELINE_2018_2022_SIDEBAR: DefaultTheme.SidebarItem[] = [
         items: [
             {
                 text: 'HTML изменения',
-                link: '/frontend-baseline-2018-2022/knowledge/html-changes.html',
+                link: '/frontend-baseline-2018-2022/knowledge/html.md',
             },
             {
                 text: 'CSS изменения',
-                link: '/frontend-baseline-2018-2022/knowledge/css-changes.html',
+                link: '/frontend-baseline-2018-2022/knowledge/css.md',
             },
             {
                 text: 'JavaScript & Web APIs',
-                link: '/frontend-baseline-2018-2022/knowledge/javascript-webapis-summary.html',
+                link: '/frontend-baseline-2018-2022/knowledge/javascript.html',
             },
         ],
     },

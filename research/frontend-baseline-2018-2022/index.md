@@ -16,14 +16,14 @@ lastUpdated: true
 
 ### Основные документы (knowledge/)
 
-| Файл                                                     | Описание                                                             | Размер |
-| -------------------------------------------------------- | -------------------------------------------------------------------- | ------ |
-| **[final-report.md](./knowledge/index.md)**              | 🌟 **НАЧАТЬ ЗДЕСЬ** — Executive summary, timeline, insights, roadmap | ~30 KB |
-| [browser-timeline.md](browser-timeline.md)               | Timeline релизов браузеров 2018–2022, baseline методология           | 20 KB  |
-| [html-changes.md](knowledge/html.md)                     | Детальный обзор HTML изменений с примерами кода                      | 36 KB  |
-| [css-changes.md](knowledge/css.md)                       | Comprehensive CSS изменения с практическими примерами                | 28 KB  |
-| [javascript-webapis-summary.md](knowledge/javascript.md) | Ключевые JavaScript (ES2018–ES2022) и Web APIs изменения             | ~20 KB |
-| [scope.md](scope.md)                                     | Границы исследования, критерии, методология                          | 12 KB  |
+| Файл                                        | Описание                                                             | Размер |
+| ------------------------------------------- | -------------------------------------------------------------------- | ------ |
+| **[final-report.md](./knowledge/index.md)** | 🌟 **НАЧАТЬ ЗДЕСЬ** — Executive summary, timeline, insights, roadmap | ~30 KB |
+| [browser-timeline.md](browser-timeline.md)  | Timeline релизов браузеров 2018–2022, baseline методология           | 20 KB  |
+| [html.md](knowledge/html.md)                | Детальный обзор HTML изменений с примерами кода                      | 36 KB  |
+| [css.md](knowledge/css.md)                  | Comprehensive CSS изменения с практическими примерами                | 28 KB  |
+| [javascript.md](knowledge/javascript.md)    | Ключевые JavaScript (ES2018–ES2022) и Web APIs изменения             | ~20 KB |
+| [scope.md](scope.md)                        | Границы исследования, критерии, методология                          | 12 KB  |
 
 **Всего:** ~146 KB детальных материалов
 
@@ -74,9 +74,9 @@ lastUpdated: true
 2. **[scope.md](scope.md)** — поймите границы и методологию
 3. **[browser-timeline.md](browser-timeline.md)** — контекст релизов и baseline
 4. Затем углубляйтесь в интересующие технологии:
-    - **[html-changes.md](knowledge/html.md)** — если интересует HTML
-    - **[css-changes.md](knowledge/css.md)** — если интересует CSS
-    - **[javascript-webapis-summary.md](knowledge/javascript.md)** — если интересует JS/APIs
+    - **[html.md](knowledge/html.md)** — если интересует HTML
+    - **[css.md](knowledge/css.md)** — если интересует CSS
+    - **[javascript.md](knowledge/javascript.md)** — если интересует JS/APIs
 
 ## 💡 Ключевые insights
 
